@@ -4,10 +4,6 @@ pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
-.mvn/wrapper/maven-wrapper.jar
-.mvn/wrapper/maven-wrapper.properties
-mvnw.cmd
-mvnw
 ### Java template
 # Compiled class file
 *.class
