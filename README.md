@@ -31,6 +31,8 @@ Main technology stack:
 - Delete posts
 - The ability to comment and like posts
 - The ability to subscribe/unsubscribe to other users
-- The ability to display a personal feed of publications selected by user interests and subscriptions to other user accounts
+- The ability to display a personal feed of publications selected by user interests and subscriptions to other user accounts, various tags
 - Search for publications
 - The ability to display a thematic feed (by tags)
+- Add a tag
+- Delete tag
