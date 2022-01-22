@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-user
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into users (username, password, firstName, lastName, email, country, birthDate,
+              subscriberCounter, status) values ('John5', '333453', 'John', 'Hill', 'john33@gmail.com',
+              'Norway', '1991-09-19', 277, 'ACTIVE')
+        - sql:
+            sql: insert into users (username, password, firstName, lastName, email, country, birthDate,
+              subscriberCounter, status) values ('Mike6', '12345', 'Michel', 'Kim', 'mike5@mail.ru',
+              'Germany', '2000-10-08', 100, 'ACTIVE')

@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-comment
+      author: Anna
+      changes:
+        - createTable:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nameOfUser
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dateOfComment
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: descriptionOfComment
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: postId
+                  type: bigint
+                  constraints:
+                    foreignKeyName: post_id_fk1
+                    referencedTableName: posts
+                    referencedColumnNames: id

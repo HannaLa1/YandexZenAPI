@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-role
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into roles (typeOfRole, userId) values ('USER', 1)
+        - sql:
+            sql: insert into roles (typeOfRole, userId) values ('ADMIN', 1)
+        - sql:
+            sql: insert into roles (typeOfRole, userId) values ('USER', 2)

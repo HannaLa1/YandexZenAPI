@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-role
+      author: Anna
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: typeOfRole
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: userId
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk2_user_id
+                    referencedTableName: users
+                    referencedColumnNames: id

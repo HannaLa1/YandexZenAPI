@@ -1,4 +1,4 @@
-package by.tms.yandexzenapi.configuration;
+package by.tms.yandexzenapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerConfiguration {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(getApiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("by.tms.yandexzenapi.controller"))
+				.apis(RequestHandlerSelectors.basePackage("by.tms.yandexzenapi.rest"))
 				.paths(PathSelectors.any())
 				.build();
 	}

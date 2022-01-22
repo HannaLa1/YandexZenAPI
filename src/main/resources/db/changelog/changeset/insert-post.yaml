@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-post
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into posts (title, description, dateOfCreation, commentCounter, likeCounter, userId)
+              values ('title1', 'description1', '2020-09-25', 2, 166, 1)
+        - sql:
+            sql: insert into posts (title, description, dateOfCreation, commentCounter, likeCounter, userId)
+              values ('title2', 'description2', '2021-10-20', 0, 90, 2)

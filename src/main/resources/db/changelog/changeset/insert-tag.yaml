@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-tag
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into tags (name, userId) values ('dog', 1)
+        - sql:
+            sql: insert into tags (name, userId) values ('politics', 2)
