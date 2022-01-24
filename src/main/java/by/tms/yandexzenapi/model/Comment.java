@@ -19,7 +19,7 @@ public class Comment {
 
     private String nameOfUser;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Post post;
 
     private LocalDateTime dateOfComment;

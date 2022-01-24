@@ -17,7 +17,7 @@ public class Subscriber {
 
     private String username;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private User user;
 
     private boolean isActive;

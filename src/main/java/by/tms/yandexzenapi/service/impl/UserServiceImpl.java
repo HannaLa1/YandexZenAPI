@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String username) {
         User byUsername = userRepository.findByUsername(username);
-        log.info("In method findByUsername - user : {} successfully found by username {}", byUsername, username);
+        log.info("In method findByUsername - user: {} successfully found by username {}", byUsername, username);
 
         return byUsername;
     }
@@ -33,12 +33,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public void registration(User user) {
         List<Role> roles = new ArrayList<>();
-        roles.add(roleRepository.findByTypeOfRole("USER"));
+        Role role = new Role();
+        role.setTypeOfRole("USER");
+        roles.add(role);
+        user.setRoleList(roles);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoleList(roles);
         user.setStatus(Status.ACTIVE);
+        role.setUser(user);
         User regUser = userRepository.save(user);
+        roleRepository.save(role);
         log.info("In method registration - user : {} successfully sign up", regUser);
     }
 
@@ -51,8 +56,31 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findById(long id) {
+        User byId = userRepository.findById(id).orElse(null);
+
+        if (byId == null) {
+            log.warn("IN method findById - no user found by id: {}", id);
+            return null;
+        }
+
+        log.info("IN method findById - user: {} found by id: {}", byId, id);
+        return byId;
+    }
+
+    @Override
     public void delete(long id) {
         userRepository.deleteById(id);
         log.info("In method delete - user with id: {} successfully deleted", id);
+    }
+
+    @Override
+    public boolean existByUsername(String username) {
+        return userRepository.existsByUsername(username);
+    }
+
+    @Override
+    public boolean existByEmail(String email) {
+        return userRepository.existsByEmail(email);
     }
 }

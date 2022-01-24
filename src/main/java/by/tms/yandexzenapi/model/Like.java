@@ -18,7 +18,7 @@ public class Like {
 
     private String nameOfUser;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Post post;
 
     private boolean isActive;

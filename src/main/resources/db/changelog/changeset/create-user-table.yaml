@@ -20,16 +20,16 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
                   type: varchar(100)
                   constraints:
                     nullable: false
               - column:
-                  name: firstName
-                  type: varchar(100)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: lastName
+                  name: last_name
                   type: varchar(100)
                   constraints:
                     nullable: false
@@ -44,12 +44,12 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: birthDate
+                  name: birth_date
                   type: date
                   constraints:
                     nullable: false
               - column:
-                  name: subscriberCounter
+                  name: subscriber_counter
                   type: int(10)
               - column:
                   name: status

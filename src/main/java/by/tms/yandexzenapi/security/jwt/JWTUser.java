@@ -63,12 +63,12 @@ public class JWTUser implements UserDetails {
     @JsonIgnore
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @JsonIgnore

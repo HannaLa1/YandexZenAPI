@@ -14,12 +14,12 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: typeOfRole
+                  name: type_of_role
                   type: varchar(100)
                   constraints:
                     nullable: false
               - column:
-                  name: userId
+                  name: user_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk2_user_id

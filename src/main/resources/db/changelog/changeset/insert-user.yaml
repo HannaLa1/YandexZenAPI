@@ -4,10 +4,10 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into users (username, password, firstName, lastName, email, country, birthDate,
-              subscriberCounter, status) values ('John5', '333453', 'John', 'Hill', 'john33@gmail.com',
-              'Norway', '1991-09-19', 277, 'ACTIVE')
+            sql: insert into users (username, password, first_name, last_name, email, country, birth_date,
+              subscriber_counter, status) values ('John5', '$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym',
+              'John', 'Hill', 'john33@gmail.com', 'Norway', '1991-09-19', 277, 'ACTIVE')
         - sql:
-            sql: insert into users (username, password, firstName, lastName, email, country, birthDate,
-              subscriberCounter, status) values ('Mike6', '12345', 'Michel', 'Kim', 'mike5@mail.ru',
-              'Germany', '2000-10-08', 100, 'ACTIVE')
+            sql: insert into users (username, password, first_name, last_name, email, country, birth_date,
+              subscriber_counter, status) values ('Mike6', '$2a$12$dEofCsayuAs/j4XQqPDqWu6Dv5hPn7BkXaFREiVUlrIBJRAtIhciu',
+              'Michel', 'Kim', 'mike5@mail.ru', 'Germany', '2000-10-08', 100, 'ACTIVE')

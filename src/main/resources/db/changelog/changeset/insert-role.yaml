@@ -4,8 +4,6 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into roles (typeOfRole, userId) values ('USER', 1)
+            sql: insert into roles (type_of_role, user_id) values ('ADMIN', 1)
         - sql:
-            sql: insert into roles (typeOfRole, userId) values ('ADMIN', 1)
-        - sql:
-            sql: insert into roles (typeOfRole, userId) values ('USER', 2)
+            sql: insert into roles (type_of_role, user_id) values ('USER', 2)

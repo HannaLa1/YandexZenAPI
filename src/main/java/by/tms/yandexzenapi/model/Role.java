@@ -20,4 +20,16 @@ public class Role {
     private User user;
 
     private String typeOfRole;
+
+    public Role(String typeOfRole) {
+        this.typeOfRole = typeOfRole;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", typeOfRole='" + typeOfRole + '\'' +
+                '}';
+    }
 }
