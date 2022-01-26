@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-comment
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into comments (nameOfUser, dateOfComment, descriptionOfComment, postId)
+              values ('Ryan_z', '2021-06-19', 'description1', 1)
+        - sql:
+            sql: insert into comments (nameOfUser, dateOfComment, descriptionOfComment, postId)
+              values ('Mark_pu', '2021-07-01', 'description2', 1)

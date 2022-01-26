@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user
+      author: Anna
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: country
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: birth_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subscriber_counter
+                  type: int(10)
+              - column:
+                  name: status
+                  type: varchar(100)
+                  constraints:
+                    nullable: false

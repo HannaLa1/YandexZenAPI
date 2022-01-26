@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-like
+      author: Anna
+      changes:
+        - createTable:
+            tableName: likes
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nameOfUser
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: postId
+                  type: bigint
+                  constraints:
+                    foreignKeyName: post_id_fk2
+                    referencedTableName: posts
+                    referencedColumnNames: id

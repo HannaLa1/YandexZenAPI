@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-user-table.yaml
+  - include:
+      file: db/changelog/changeset/create-tag-table.yaml
+  - include:
+      file: db/changelog/changeset/create-role-table.yaml
+  - include:
+      file: db/changelog/changeset/create-post-table.yaml
+  - include:
+      file: db/changelog/changeset/create-subscriber-table.yaml
+  - include:
+      file: db/changelog/changeset/create-comment-table.yaml
+  - include:
+      file: db/changelog/changeset/create-like-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-user.yaml
+  - include:
+      file: db/changelog/changeset/insert-tag.yaml
+  - include:
+      file: db/changelog/changeset/insert-role.yaml
+  - include:
+      file: db/changelog/changeset/insert-post.yaml
+  - include:
+      file: db/changelog/changeset/insert-subscriber.yaml
+  - include:
+      file: db/changelog/changeset/insert-comment.yaml
+  - include:
+      file: db/changelog/changeset/insert-like.yaml
+

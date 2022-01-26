@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-subscriber
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into subscribers (username, userId) values ('Sam12', 1)
+        - sql:
+            sql: insert into subscribers (username, userId) values ('Tom_9', 2)

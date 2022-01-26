@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-subscriber
+      author: Anna
+      changes:
+        - createTable:
+            tableName: subscribers
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: userId
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk4_user_id
+                    referencedTableName: users
+                    referencedColumnNames: id

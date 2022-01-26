@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-like
+      author: Anna
+      changes:
+        - sql:
+            sql: insert into likes (nameOfUser, postId)
+              values ('Nick_', 1)
+        - sql:
+            sql: insert into likes (nameOfUser, postId)
+              values ('Tommy7', 2)
