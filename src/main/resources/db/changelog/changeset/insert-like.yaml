@@ -4,8 +4,23 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into likes (nameOfUser, postId)
+            sql: insert into likes (name_of_user, post_id)
               values ('Nick_', 1)
         - sql:
-            sql: insert into likes (nameOfUser, postId)
+            sql: insert into likes (name_of_user, post_id)
               values ('Tommy7', 2)
+        - sql:
+            sql: insert into likes (name_of_user, post_id)
+              values ('Johny_88', 3)
+        - sql:
+            sql: insert into likes (name_of_user, post_id)
+              values ('Molly', 3)
+        - sql:
+            sql: insert into likes (name_of_user, post_id)
+              values ('Sammy90', 4)
+        - sql:
+            sql: insert into likes (name_of_user, post_id)
+              values ('Abby123', 4)
+        - sql:
+            sql: insert into likes (name_of_user, post_id)
+              values ('Odry_Li', 5)

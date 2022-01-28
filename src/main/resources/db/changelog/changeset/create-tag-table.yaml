@@ -19,9 +19,10 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: userId
+                  name: user_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk1_user_id
                     referencedTableName: users
                     referencedColumnNames: id
+                    deleteCascade: true

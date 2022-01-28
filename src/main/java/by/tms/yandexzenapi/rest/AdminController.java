@@ -1,17 +1,20 @@
 package by.tms.yandexzenapi.rest;
 
-import by.tms.yandexzenapi.dto.UserAdminDTO;
-import by.tms.yandexzenapi.mapper.UserAdminMapper;
-import by.tms.yandexzenapi.model.User;
-import by.tms.yandexzenapi.service.UserService;
+import by.tms.yandexzenapi.dto.post.PostUserDTO;
+import by.tms.yandexzenapi.dto.tag.TagUserDTO;
+import by.tms.yandexzenapi.mapper.post.PostUserMapper;
+import by.tms.yandexzenapi.mapper.tag.TagUserMapper;
+import by.tms.yandexzenapi.service.PostService;
+import by.tms.yandexzenapi.service.TagService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,17 +22,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/admin")
 public class AdminController {
 
-    private final UserService service;
-    private final UserAdminMapper mapper;
+    private final PostService postService;
+    private final TagService tagService;
+    private final PostUserMapper postUserMapper;
+    private final TagUserMapper tagUserMapper;
 
-    @GetMapping("/users/{id}")
-    public ResponseEntity<UserAdminDTO> getUserById(@PathVariable long id) {
-        User user = service.findById(id);
+    @GetMapping("/posts")
+    public ResponseEntity<List<PostUserDTO>> findAllPostsOfUsers(){
+        List<PostUserDTO> posts = postUserMapper.toPostUserDTOList(postService.findAllPostsOfUsers());
 
-        if (user == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
+        return new ResponseEntity<>(posts, HttpStatus.OK);
+    }
 
-        return new ResponseEntity<>(mapper.toUserAdminDTO(user), HttpStatus.OK);
+    @GetMapping("/tags")
+    public ResponseEntity<List<TagUserDTO>> findAllTagsOfUsers(){
+        List<TagUserDTO> tags = tagUserMapper.toTagUserDTOList(tagService.findAllTagsOfUsers());
+
+        return new ResponseEntity<>(tags, HttpStatus.OK);
     }
 }

@@ -4,6 +4,12 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into tags (name, userId) values ('dog', 1)
+            sql: insert into tags (name, user_id) values ('dog', 1)
         - sql:
-            sql: insert into tags (name, userId) values ('politics', 2)
+            sql: insert into tags (name, user_id) values ('politics', 2)
+        - sql:
+            sql: insert into tags (name, user_id) values ('physics', 2)
+        - sql:
+            sql: insert into tags (name, user_id) values ('science', 3)
+        - sql:
+            sql: insert into tags (name, user_id) values ('biology', 3)

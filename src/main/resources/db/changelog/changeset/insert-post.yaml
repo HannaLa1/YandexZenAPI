@@ -4,8 +4,17 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into posts (title, description, dateOfCreation, commentCounter, likeCounter, userId)
-              values ('title1', 'description1', '2020-09-25', 2, 166, 1)
+            sql: insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id)
+              values ('title1', 'description1', '2020-09-25', 1, 1, 1)
         - sql:
-            sql: insert into posts (title, description, dateOfCreation, commentCounter, likeCounter, userId)
-              values ('title2', 'description2', '2021-10-20', 0, 90, 2)
+            sql: insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id)
+              values ('title2', 'description2', '2021-10-20', 2, 1, 1)
+        - sql:
+            sql: insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id)
+              values ('title3', 'description3', '2019-01-09', 1, 2, 2)
+        - sql:
+            sql: insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id)
+              values ('title4', 'description4', '2021-03-15', 2, 2, 2)
+        - sql:
+            sql: insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id)
+              values ('title5', 'description5', '2021-07-16', 1, 1, 3)

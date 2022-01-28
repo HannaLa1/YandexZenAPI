@@ -14,14 +14,15 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: nameOfUser
+                  name: name_of_user
                   type: varchar(100)
                   constraints:
                     nullable: false
               - column:
-                  name: postId
+                  name: post_id
                   type: bigint
                   constraints:
                     foreignKeyName: post_id_fk2
                     referencedTableName: posts
                     referencedColumnNames: id
+                    deleteCascade: true

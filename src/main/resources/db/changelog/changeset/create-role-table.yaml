@@ -25,3 +25,4 @@ databaseChangeLog:
                     foreignKeyName: fk2_user_id
                     referencedTableName: users
                     referencedColumnNames: id
+                    deleteCascade: true

@@ -25,6 +25,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/swagger-ui/index.html",
             "/swagger-resources/**",
             "configuration/**",
+            "/**/**",
             "webjars/**",
             "/*.html",
             "/**/*.html",
@@ -41,13 +42,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
+                .csrf()
+                .disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, PUBLIC_URLS).permitAll()
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
-                .antMatchers(ADMIN_ENDPOINT).hasAuthority("ADMIN")
+                .antMatchers(ADMIN_ENDPOINT).hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, PUBLIC_URLS).permitAll()
                 .antMatchers(  "/db/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
