@@ -1,9 +1,9 @@
 package by.tms.yandexzenapi.service.impl;
 
+import by.tms.yandexzenapi.model.Post;
 import by.tms.yandexzenapi.model.Tag;
-import by.tms.yandexzenapi.model.User;
+import by.tms.yandexzenapi.repository.PostRepository;
 import by.tms.yandexzenapi.repository.TagRepository;
-import by.tms.yandexzenapi.repository.UserRepository;
 import by.tms.yandexzenapi.service.TagService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,15 +16,15 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TagServiceImpl implements TagService {
 
-    private final UserRepository userRepository;
+    private final PostRepository postRepository;
     private final TagRepository tagRepository;
 
     @Override
-    public Tag save(String username, Tag tag) {
-        User byUsername = userRepository.findByUsername(username)
-                .orElseThrow(() -> new RuntimeException("User with username: " + username + " not found"));
+    public Tag save(long id, Tag tag) {
+        Post byId = postRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Post with id: " + id + " not found"));
 
-        tag.setUser(byUsername);
+        tag.setPost(byId);
         log.info("In method save - tag : {} successfully saved", tag);
 
         return tagRepository.save(tag);
@@ -42,13 +42,13 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public List<Tag> findAll(long id) {
-        List<Tag> tags = tagRepository.findAllTagsOfUser(id);
+        List<Tag> tags = tagRepository.findAllTagsOfPost(id);
 
         if (tags.isEmpty()){
             throw new RuntimeException("No tags found!");
         }
 
-        log.info("In method findAll - found {} tags of user with id : {}", tags.size(), id);
+        log.info("In method findAll - found {} tags of post with id : {}", tags.size(), id);
 
         return tags;
     }
@@ -60,28 +60,28 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public boolean existByUserUsername(String username, String usernameOfTag) {
+    public boolean existByPostId(long id, String name) {
         return tagRepository.findAll().stream()
-                .anyMatch(tag -> tag.getUser().getUsername().equals(username) &&
-                        tag.getName().equals(usernameOfTag));
+                .anyMatch(tag -> tag.getPost().getId() == id &&
+                        tag.getName().equals(name));
     }
 
     @Override
-    public List<Tag> findAllTagsOfUsers() {
+    public List<Tag> findAllTagsOfPosts() {
         List<Tag> tags = tagRepository.findAll();
 
         if (tags.isEmpty()){
             throw new RuntimeException("No tags found!");
         }
 
-        log.info("In method findAllTagsOfUsers - found {} tags of users}", tags.size());
+        log.info("In method findAllTagsOfUsers - found {} tags of posts}", tags.size());
 
         return tags;
     }
 
     @Override
-    public List<Tag> findUsersByTag(String name) {
-        List<Tag> tags = tagRepository.findUsersByTag(name);
+    public List<Tag> findPostsByTag(String name) {
+        List<Tag> tags = tagRepository.findPostsByTag(name);
 
         if (tags.isEmpty()){
             throw new RuntimeException("No tags found!");

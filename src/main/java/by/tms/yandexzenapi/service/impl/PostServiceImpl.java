@@ -5,7 +5,6 @@ import by.tms.yandexzenapi.model.User;
 import by.tms.yandexzenapi.repository.PostRepository;
 import by.tms.yandexzenapi.repository.UserRepository;
 import by.tms.yandexzenapi.service.PostService;
-import by.tms.yandexzenapi.service.TagService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,7 +19,6 @@ import java.util.stream.Collectors;
 public class PostServiceImpl implements PostService {
     private final UserRepository userRepository;
     private final PostRepository postRepository;
-    private final TagService tagService;
 
     @Override
     public Post save(String username, Post post) {

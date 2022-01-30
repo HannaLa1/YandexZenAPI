@@ -25,7 +25,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/swagger-ui/index.html",
             "/swagger-resources/**",
             "configuration/**",
-            "/**/**",
             "webjars/**",
             "/*.html",
             "/**/*.html",
@@ -48,9 +47,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
-                .antMatchers(ADMIN_ENDPOINT).hasRole("ADMIN")
+                .antMatchers(ADMIN_ENDPOINT).hasAuthority("ADMIN")
                 .antMatchers(HttpMethod.GET, PUBLIC_URLS).permitAll()
-                .antMatchers(  "/db/**").permitAll()
+                .antMatchers("/db/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JWTConfig(jwtTokenProvider));

@@ -1,11 +1,11 @@
 package by.tms.yandexzenapi.rest;
 
 import by.tms.yandexzenapi.dto.post.PostDTO;
-import by.tms.yandexzenapi.dto.post.PostUserDTO;
 import by.tms.yandexzenapi.mapper.post.PostMapper;
-import by.tms.yandexzenapi.mapper.post.PostUserMapper;
 import by.tms.yandexzenapi.model.Post;
 import by.tms.yandexzenapi.service.PostService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,9 +22,9 @@ public class PostController {
 
     private final PostService service;
     private final PostMapper postMapper;
-    private final PostUserMapper postUserMapper;
 
     @PostMapping("/{username}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<PostDTO> save(@PathVariable String username, @RequestBody PostDTO postDTO){
         Post post = service.save(username, postMapper.toPost(postDTO));
 
@@ -32,6 +32,7 @@ public class PostController {
     }
 
     @GetMapping("/all/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<List<PostDTO>> findAll(@PathVariable long id){
         List<PostDTO> posts = postMapper.toPostDTOList(service.findAll(id));
 
@@ -39,6 +40,7 @@ public class PostController {
     }
 
     @PutMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<PostDTO> update(@PathVariable long id, @RequestBody PostDTO postDTO){
         Post updatedPost = service.update(id, postMapper.toPost(postDTO));
 
@@ -46,6 +48,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<PostDTO> delete(@PathVariable long id){
         final Post post = service.findById(id);
 

@@ -19,6 +19,7 @@
         <org.projectlombok.version>1.18.2</org.projectlombok.version>
         <io.springfox.version>3.0.0</io.springfox.version>
         <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
+        <org.liquibase.version>3.10.2</org.liquibase.version>
         <org.apache.maven.plugins.version>3.5.1</org.apache.maven.plugins.version>
     </properties>
     <dependencies>
@@ -50,7 +51,7 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
-            <version>3.10.2</version>
+            <version>${org.liquibase.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.xml.bind</groupId>

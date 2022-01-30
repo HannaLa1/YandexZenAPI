@@ -1,0 +1,578 @@
+2022-01-30 18:42:32.807  INFO 10556 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 10556 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 18:42:32.809  INFO 10556 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 18:42:34.995  INFO 10556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 18:42:35.271  INFO 10556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 236 ms. Found 7 JPA repository interfaces.
+2022-01-30 18:42:36.887  INFO 10556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 18:42:36.899  WARN 10556 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 18:42:37.729  INFO 10556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 18:42:40.014  INFO 10556 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:42:40.069  INFO 10556 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:42:40.073  INFO 10556 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 18:42:40.194  INFO 10556 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 18:42:40.589  INFO 10556 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 18:42:40.592  INFO 10556 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 18:42:40.594  INFO 10556 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 18:42:40.594  INFO 10556 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 18:42:40.660  INFO 10556 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 18:42:40.793  INFO 10556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 18:42:41.140  INFO 10556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 18:42:41.363  INFO 10556 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 18:42:41.711  INFO 10556 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 18:42:43.278  INFO 10556 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 18:42:43.287  INFO 10556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:42:43.897  WARN 10556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 18:42:45.362  INFO 10556 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 18:42:45.616  INFO 10556 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 18:42:46.037  INFO 10556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:42:46.722  INFO 10556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c843a4f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bb44322, org.springframework.security.web.header.HeaderWriterFilter@73145db2, org.springframework.security.web.authentication.logout.LogoutFilter@5db9952b, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@78cbb140, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c176ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4421decd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72a14347, org.springframework.security.web.session.SessionManagementFilter@78a4764f, org.springframework.security.web.access.ExceptionTranslationFilter@5ae9ea0a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a4ccb7b]
+2022-01-30 18:42:47.422  INFO 10556 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 15.496 seconds (JVM running for 17.113)
+2022-01-30 18:42:47.716  INFO 10556 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:42:47.727  INFO 10556 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:42:47.730  INFO 10556 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 18:42:47.747  INFO 10556 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 18:50:55.094  INFO 7116 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 7116 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 18:50:55.095  INFO 7116 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 18:50:57.187  INFO 7116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 18:50:57.294  INFO 7116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 7 JPA repository interfaces.
+2022-01-30 18:50:58.557  INFO 7116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 18:50:58.564  WARN 7116 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 18:50:58.893  INFO 7116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 18:51:00.898  INFO 7116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:51:00.907  INFO 7116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:51:00.910  INFO 7116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 18:51:01.002  INFO 7116 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 18:51:01.340  INFO 7116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 18:51:01.343  INFO 7116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 18:51:01.345  INFO 7116 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 18:51:01.345  INFO 7116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 18:51:01.391  INFO 7116 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 18:51:01.490  INFO 7116 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 18:51:01.575  INFO 7116 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 18:51:01.791  INFO 7116 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 18:51:02.235  INFO 7116 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 18:51:03.286  INFO 7116 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 18:51:03.301  INFO 7116 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:51:03.840  WARN 7116 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 18:51:05.028  INFO 7116 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 18:51:05.200  INFO 7116 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 18:51:05.533  INFO 7116 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:51:06.231  INFO 7116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f4f8d38, org.springframework.security.web.context.SecurityContextPersistenceFilter@594c8879, org.springframework.security.web.header.HeaderWriterFilter@7238072e, org.springframework.security.web.authentication.logout.LogoutFilter@29025b1a, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@6c946b14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@286bd902, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ddf2447, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32ebfde1, org.springframework.security.web.session.SessionManagementFilter@294bb5f0, org.springframework.security.web.access.ExceptionTranslationFilter@5c9aff2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35390561]
+2022-01-30 18:51:06.807  INFO 7116 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 12.316 seconds (JVM running for 14.553)
+2022-01-30 18:51:07.095  INFO 7116 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:51:07.109  INFO 7116 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:51:07.113  INFO 7116 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 18:51:07.134  INFO 7116 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 18:57:22.186  INFO 18072 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 18072 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 18:57:22.189  INFO 18072 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 18:57:23.993  INFO 18072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 18:57:24.127  INFO 18072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 7 JPA repository interfaces.
+2022-01-30 18:57:24.900  INFO 18072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 18:57:24.908  WARN 18072 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 18:57:25.242  INFO 18072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 18:57:26.542  INFO 18072 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:57:26.572  INFO 18072 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:57:26.575  INFO 18072 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 18:57:26.650  INFO 18072 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 18:57:27.021  INFO 18072 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 18:57:27.024  INFO 18072 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 18:57:27.025  INFO 18072 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 18:57:27.026  INFO 18072 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 18:57:27.067  INFO 18072 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 18:57:27.167  INFO 18072 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 18:57:27.258  INFO 18072 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 18:57:27.464  INFO 18072 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 18:57:27.910  INFO 18072 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 18:57:29.053  INFO 18072 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 18:57:29.067  INFO 18072 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:57:29.791  WARN 18072 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 18:57:31.437  INFO 18072 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 18:57:31.759  INFO 18072 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 18:57:32.163  INFO 18072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:57:33.056  INFO 18072 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cbb32f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ddc5c07, org.springframework.security.web.header.HeaderWriterFilter@176630ee, org.springframework.security.web.authentication.logout.LogoutFilter@44cefd71, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@5f4f8d38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67988d92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bb44322, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c946b14, org.springframework.security.web.session.SessionManagementFilter@60b33bc, org.springframework.security.web.access.ExceptionTranslationFilter@1201d134, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@691396a0]
+2022-01-30 18:57:33.877  INFO 18072 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 12.324 seconds (JVM running for 14.112)
+2022-01-30 18:57:34.248  INFO 18072 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:57:34.289  INFO 18072 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:57:34.293  INFO 18072 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 18:57:34.313  INFO 18072 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 18:58:54.243  INFO 19464 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 19464 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 18:58:54.245  INFO 19464 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 18:58:56.579  INFO 19464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 18:58:56.721  INFO 19464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 7 JPA repository interfaces.
+2022-01-30 18:58:57.758  INFO 19464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 18:58:57.769  WARN 19464 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 18:58:58.100  INFO 19464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 18:58:59.764  INFO 19464 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:58:59.776  INFO 19464 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 18:58:59.780  INFO 19464 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 18:58:59.908  INFO 19464 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 18:59:00.331  INFO 19464 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 18:59:00.334  INFO 19464 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 18:59:00.336  INFO 19464 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 18:59:00.337  INFO 19464 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 18:59:00.396  INFO 19464 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 18:59:00.532  INFO 19464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 18:59:00.612  INFO 19464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 18:59:00.796  INFO 19464 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 18:59:01.200  INFO 19464 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 18:59:02.111  INFO 19464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 18:59:02.121  INFO 19464 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:59:02.806  WARN 19464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 18:59:04.535  INFO 19464 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 18:59:04.800  INFO 19464 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 18:59:05.322  INFO 19464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:59:06.143  INFO 19464 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cbb32f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ddc5c07, org.springframework.security.web.header.HeaderWriterFilter@176630ee, org.springframework.security.web.authentication.logout.LogoutFilter@44cefd71, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@5f4f8d38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67988d92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bb44322, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c946b14, org.springframework.security.web.session.SessionManagementFilter@60b33bc, org.springframework.security.web.access.ExceptionTranslationFilter@1201d134, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@691396a0]
+2022-01-30 18:59:07.107  INFO 19464 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 13.526 seconds (JVM running for 15.417)
+2022-01-30 18:59:07.443  INFO 19464 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 18:59:07.460  INFO 19464 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 18:59:07.463  INFO 19464 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 18:59:07.481  INFO 19464 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:02:34.587  INFO 5188 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 5188 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:02:34.589  INFO 5188 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:02:36.504  INFO 5188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:02:36.646  INFO 5188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:02:37.421  INFO 5188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:02:37.432  WARN 5188 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:02:37.710  INFO 5188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:02:39.074  INFO 5188 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:02:39.085  INFO 5188 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:02:39.089  INFO 5188 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:02:39.163  INFO 5188 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:02:39.562  INFO 5188 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:02:39.565  INFO 5188 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:02:39.567  INFO 5188 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:02:39.567  INFO 5188 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:02:39.618  INFO 5188 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:02:39.746  INFO 5188 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:02:39.848  INFO 5188 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:02:40.120  INFO 5188 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:02:40.706  INFO 5188 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:02:41.843  INFO 5188 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:02:41.856  INFO 5188 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:02:42.596  WARN 5188 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:02:44.324  INFO 5188 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:02:44.566  INFO 5188 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:02:45.011  INFO 5188 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:02:45.701  INFO 5188 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c946b14, org.springframework.security.web.context.SecurityContextPersistenceFilter@3dee7142, org.springframework.security.web.header.HeaderWriterFilter@2cb6c8a6, org.springframework.security.web.authentication.logout.LogoutFilter@497dc589, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@32ebfde1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15598336, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59a9769e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@671275fe, org.springframework.security.web.session.SessionManagementFilter@786384a6, org.springframework.security.web.access.ExceptionTranslationFilter@3178f903, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36db5318]
+2022-01-30 19:02:46.435  INFO 5188 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 12.477 seconds (JVM running for 14.205)
+2022-01-30 19:02:46.803  INFO 5188 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:02:46.817  INFO 5188 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:02:46.821  INFO 5188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:02:46.838  INFO 5188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:08:01.706  INFO 4664 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 4664 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:08:01.708  INFO 4664 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:08:03.528  INFO 4664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:08:03.642  INFO 4664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:08:04.560  INFO 4664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:08:04.571  WARN 4664 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:08:04.912  INFO 4664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:08:06.315  INFO 4664 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:08:06.326  INFO 4664 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:08:06.329  INFO 4664 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:08:06.384  INFO 4664 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:08:06.825  INFO 4664 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:08:06.827  INFO 4664 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:08:06.829  INFO 4664 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:08:06.829  INFO 4664 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:08:06.879  INFO 4664 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:08:07.000  INFO 4664 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:08:07.086  INFO 4664 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:08:07.313  INFO 4664 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:08:07.761  INFO 4664 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:08:08.586  INFO 4664 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:08:08.597  INFO 4664 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:08:09.192  WARN 4664 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:08:10.561  INFO 4664 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:08:10.759  INFO 4664 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:08:11.113  INFO 4664 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:08:11.843  INFO 4664 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b940d24, org.springframework.security.web.context.SecurityContextPersistenceFilter@5bf394be, org.springframework.security.web.header.HeaderWriterFilter@4080ea09, org.springframework.security.web.authentication.logout.LogoutFilter@1bed8afd, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@667dfd42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57e8714b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cc3e43d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1234d9f6, org.springframework.security.web.session.SessionManagementFilter@3dee7142, org.springframework.security.web.access.ExceptionTranslationFilter@176630ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51971d32]
+2022-01-30 19:08:12.542  INFO 4664 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 11.391 seconds (JVM running for 13.146)
+2022-01-30 19:08:12.855  INFO 4664 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:08:12.870  INFO 4664 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:08:12.874  INFO 4664 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:08:12.893  INFO 4664 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:10:01.097  INFO 14456 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 14456 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:10:01.098  INFO 14456 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:10:02.845  INFO 14456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:10:02.982  INFO 14456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:10:03.873  INFO 14456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:10:03.881  WARN 14456 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:10:04.114  INFO 14456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:10:05.565  INFO 14456 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:10:05.576  INFO 14456 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:10:05.579  INFO 14456 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:10:05.668  INFO 14456 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:10:06.088  INFO 14456 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:10:06.091  INFO 14456 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:10:06.092  INFO 14456 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:10:06.093  INFO 14456 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:10:06.153  INFO 14456 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:10:06.249  INFO 14456 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:10:06.348  INFO 14456 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:10:06.625  INFO 14456 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:10:06.982  INFO 14456 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:10:07.912  INFO 14456 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:10:07.922  INFO 14456 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:10:08.525  WARN 14456 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:10:09.953  INFO 14456 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:10:10.129  INFO 14456 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:10:10.542  INFO 14456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:10:11.244  INFO 14456 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54dd2962, org.springframework.security.web.context.SecurityContextPersistenceFilter@73145db2, org.springframework.security.web.header.HeaderWriterFilter@1201d134, org.springframework.security.web.authentication.logout.LogoutFilter@3cf6f3aa, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@181f61b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@294bb5f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15598336, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c601487, org.springframework.security.web.session.SessionManagementFilter@67f3b72d, org.springframework.security.web.access.ExceptionTranslationFilter@648374fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2667d4fe]
+2022-01-30 19:10:11.901  INFO 14456 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 11.313 seconds (JVM running for 12.577)
+2022-01-30 19:10:12.258  INFO 14456 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:10:12.274  INFO 14456 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:10:12.277  INFO 14456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:10:12.292  INFO 14456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:17:31.201  INFO 3744 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 3744 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:17:31.203  INFO 3744 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:17:33.005  INFO 3744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:17:33.128  INFO 3744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:17:33.960  INFO 3744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:17:33.968  WARN 3744 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:17:34.290  INFO 3744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:17:35.758  INFO 3744 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:17:35.766  INFO 3744 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:17:35.769  INFO 3744 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:17:35.823  INFO 3744 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:17:36.170  INFO 3744 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:17:36.172  INFO 3744 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:17:36.175  INFO 3744 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:17:36.176  INFO 3744 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:17:36.229  INFO 3744 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:17:36.338  INFO 3744 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:17:36.428  INFO 3744 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:17:36.692  INFO 3744 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:17:37.125  INFO 3744 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:17:38.083  INFO 3744 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:17:38.093  INFO 3744 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:17:38.688  WARN 3744 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:17:40.048  INFO 3744 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:17:40.276  INFO 3744 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:17:40.673  INFO 3744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:17:41.267  INFO 3744 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e69a9c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@294bb5f0, org.springframework.security.web.header.HeaderWriterFilter@35ca1e22, org.springframework.security.web.authentication.logout.LogoutFilter@1e1e77ed, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@23c21550, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ddc5c07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ef10390, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4033d25d, org.springframework.security.web.session.SessionManagementFilter@924c964, org.springframework.security.web.access.ExceptionTranslationFilter@3829bb5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69f6b00b]
+2022-01-30 19:17:42.082  INFO 3744 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 11.824 seconds (JVM running for 13.602)
+2022-01-30 19:17:42.549  INFO 3744 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:17:42.574  INFO 3744 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:17:42.581  INFO 3744 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:17:42.609  INFO 3744 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:20:00.508  INFO 11416 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 11416 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:20:00.509  INFO 11416 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:20:02.387  INFO 11416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:20:02.538  INFO 11416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:20:03.419  INFO 11416 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:20:03.427  WARN 11416 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:20:03.767  INFO 11416 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:20:05.261  INFO 11416 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:20:05.272  INFO 11416 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:20:05.275  INFO 11416 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:20:05.338  INFO 11416 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:20:05.668  INFO 11416 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:20:05.671  INFO 11416 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:20:05.672  INFO 11416 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:20:05.673  INFO 11416 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:20:05.727  INFO 11416 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:20:05.826  INFO 11416 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:20:05.912  INFO 11416 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:20:06.155  INFO 11416 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:20:06.627  INFO 11416 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:20:07.551  INFO 11416 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:20:07.563  INFO 11416 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:20:08.146  WARN 11416 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:20:10.440  INFO 11416 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:20:10.654  INFO 11416 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:20:11.232  INFO 11416 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:20:11.885  INFO 11416 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32ebfde1, org.springframework.security.web.context.SecurityContextPersistenceFilter@67988d92, org.springframework.security.web.header.HeaderWriterFilter@4e9d3925, org.springframework.security.web.authentication.logout.LogoutFilter@346c568d, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@671275fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bf394be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c176ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44971269, org.springframework.security.web.session.SessionManagementFilter@7215172a, org.springframework.security.web.access.ExceptionTranslationFilter@35ca1e22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3504fbfe]
+2022-01-30 19:20:12.655  INFO 11416 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 12.763 seconds (JVM running for 14.353)
+2022-01-30 19:20:13.222  INFO 11416 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:20:13.236  INFO 11416 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:20:13.267  INFO 11416 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:20:13.339  INFO 11416 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:21:59.897  INFO 16260 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 16260 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:21:59.900  INFO 16260 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:22:01.929  INFO 16260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:22:02.089  INFO 16260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:22:02.855  INFO 16260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:22:02.863  WARN 16260 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:22:03.177  INFO 16260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:22:04.539  INFO 16260 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:22:04.566  INFO 16260 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:22:04.569  INFO 16260 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:22:04.687  INFO 16260 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:22:05.036  INFO 16260 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:22:05.038  INFO 16260 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:22:05.039  INFO 16260 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:22:05.040  INFO 16260 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:22:05.079  INFO 16260 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:22:05.206  INFO 16260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:22:05.307  INFO 16260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:22:05.553  INFO 16260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:22:05.965  INFO 16260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:22:06.972  INFO 16260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:22:06.982  INFO 16260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:22:07.548  WARN 16260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:22:08.989  INFO 16260 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:22:09.196  INFO 16260 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:22:09.560  INFO 16260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:22:10.268  INFO 16260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b940d24, org.springframework.security.web.context.SecurityContextPersistenceFilter@5bf394be, org.springframework.security.web.header.HeaderWriterFilter@4080ea09, org.springframework.security.web.authentication.logout.LogoutFilter@1bed8afd, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@667dfd42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57e8714b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cc3e43d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1234d9f6, org.springframework.security.web.session.SessionManagementFilter@3dee7142, org.springframework.security.web.access.ExceptionTranslationFilter@176630ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51971d32]
+2022-01-30 19:22:10.950  INFO 16260 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 11.624 seconds (JVM running for 13.284)
+2022-01-30 19:22:11.214  INFO 16260 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:22:11.230  INFO 16260 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:22:11.234  INFO 16260 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:22:11.252  INFO 16260 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:47:56.047  INFO 10528 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 10528 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:47:56.047  INFO 7616 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 7616 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:47:56.051  INFO 10528 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:47:56.051  INFO 7616 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:47:59.495  INFO 7616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:47:59.495  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:47:59.652  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:47:59.654  INFO 7616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:48:00.856  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:48:00.856  INFO 7616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:48:00.871  WARN 10528 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:48:00.872  WARN 7616 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:48:01.393  INFO 7616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:48:01.394  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:48:03.451  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:48:03.463  INFO 7616 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:48:03.481  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:48:03.481  INFO 7616 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:48:03.486  INFO 7616 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:48:03.487  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:48:03.625  INFO 7616 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:48:03.626  INFO 10528 --- [main] l.lockservice.StandardLockService        : Waiting for changelog lock....
+2022-01-30 19:48:04.069  INFO 7616 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:48:04.073  INFO 7616 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:48:04.075  INFO 7616 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:48:04.076  INFO 7616 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:48:04.135  INFO 7616 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:48:04.257  INFO 7616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:48:04.348  INFO 7616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:48:04.592  INFO 7616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:48:05.126  INFO 7616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:48:05.945  INFO 7616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:48:05.954  INFO 7616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:48:06.766  WARN 7616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:48:08.299  INFO 7616 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:48:08.574  INFO 7616 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:48:08.965  INFO 7616 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:48:09.732  INFO 7616 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cbb32f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ddc5c07, org.springframework.security.web.header.HeaderWriterFilter@176630ee, org.springframework.security.web.authentication.logout.LogoutFilter@44cefd71, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@5f4f8d38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67988d92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bb44322, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c946b14, org.springframework.security.web.session.SessionManagementFilter@60b33bc, org.springframework.security.web.access.ExceptionTranslationFilter@1201d134, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@691396a0]
+2022-01-30 19:48:10.554  INFO 7616 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 15.276 seconds (JVM running for 17.798)
+2022-01-30 19:48:10.866  INFO 7616 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:48:10.881  INFO 7616 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:48:10.885  INFO 7616 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:48:10.910  INFO 7616 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:48:13.655  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:48:13.702  INFO 10528 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:48:14.113  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:48:14.118  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:48:14.119  INFO 10528 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:48:14.120  INFO 10528 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:48:14.185  INFO 10528 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:48:14.315  INFO 10528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:48:14.382  INFO 10528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:48:14.560  INFO 10528 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:48:14.931  INFO 10528 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:48:15.710  INFO 10528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:48:15.717  INFO 10528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:48:16.283  WARN 10528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:48:17.738  INFO 10528 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:48:17.975  INFO 10528 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:48:18.350  INFO 10528 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:48:18.954  INFO 10528 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c601487, org.springframework.security.web.context.SecurityContextPersistenceFilter@60b33bc, org.springframework.security.web.header.HeaderWriterFilter@3178f903, org.springframework.security.web.authentication.logout.LogoutFilter@7343df40, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@1e69a9c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7215172a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78a4764f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23c21550, org.springframework.security.web.session.SessionManagementFilter@4e33a209, org.springframework.security.web.access.ExceptionTranslationFilter@6b133599, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@494e6dbb]
+2022-01-30 19:48:19.697  INFO 10528 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 24.418 seconds (JVM running for 26.94)
+2022-01-30 19:48:19.963  INFO 10528 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:48:19.975  INFO 10528 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:48:19.978  INFO 10528 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:48:19.995  INFO 10528 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 19:49:27.967  INFO 7812 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 7812 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 19:49:27.969  INFO 7812 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 19:49:29.740  INFO 7812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 19:49:29.866  INFO 7812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 7 JPA repository interfaces.
+2022-01-30 19:49:30.864  INFO 7812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 19:49:30.871  WARN 7812 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 19:49:31.156  INFO 7812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 19:49:32.494  INFO 7812 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:49:32.501  INFO 7812 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 19:49:32.504  INFO 7812 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 19:49:32.570  INFO 7812 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 19:49:32.936  INFO 7812 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 19:49:32.938  INFO 7812 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 19:49:32.940  INFO 7812 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 19:49:32.941  INFO 7812 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 19:49:32.991  INFO 7812 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 19:49:33.097  INFO 7812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 19:49:33.164  INFO 7812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 19:49:33.335  INFO 7812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 19:49:33.682  INFO 7812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 19:49:34.424  INFO 7812 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 19:49:34.432  INFO 7812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:49:34.970  WARN 7812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 19:49:36.329  INFO 7812 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 19:49:36.586  INFO 7812 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 19:49:36.937  INFO 7812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:49:37.518  INFO 7812 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2dc33a2d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4080ea09, org.springframework.security.web.header.HeaderWriterFilter@66df5adb, org.springframework.security.web.authentication.logout.LogoutFilter@11d16eb8, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@59ed8460, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e33a209, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ddc5c07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aaed411, org.springframework.security.web.session.SessionManagementFilter@2cb6c8a6, org.springframework.security.web.access.ExceptionTranslationFilter@7bbec1cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@479875b1]
+2022-01-30 19:49:38.247  INFO 7812 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 10.735 seconds (JVM running for 11.943)
+2022-01-30 19:49:38.513  INFO 7812 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 19:49:38.525  INFO 7812 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 19:49:38.528  INFO 7812 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 19:49:38.543  INFO 7812 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 20:00:14.550  INFO 17844 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 17844 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 20:00:14.552  INFO 17844 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 20:00:16.638  INFO 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 20:00:16.758  INFO 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 7 JPA repository interfaces.
+2022-01-30 20:00:17.637  INFO 17844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 20:00:17.647  WARN 17844 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 20:00:18.052  INFO 17844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 20:00:19.488  INFO 17844 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:00:19.509  INFO 17844 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:00:19.511  INFO 17844 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 20:00:19.569  INFO 17844 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 20:00:19.954  INFO 17844 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 20:00:19.958  INFO 17844 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 20:00:19.960  INFO 17844 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 20:00:19.961  INFO 17844 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 20:00:20.018  INFO 17844 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 20:00:20.118  INFO 17844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 20:00:20.284  INFO 17844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 20:00:20.512  INFO 17844 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 20:00:21.019  INFO 17844 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 20:00:22.021  INFO 17844 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 20:00:22.034  INFO 17844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:00:22.727  WARN 17844 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 20:00:24.306  INFO 17844 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 20:00:24.518  INFO 17844 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 20:00:24.868  INFO 17844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:00:25.560  INFO 17844 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44971269, org.springframework.security.web.context.SecurityContextPersistenceFilter@15598336, org.springframework.security.web.header.HeaderWriterFilter@5ae9ea0a, org.springframework.security.web.authentication.logout.LogoutFilter@3c9b416a, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@b940d24, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ef10390, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e4c74ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@667dfd42, org.springframework.security.web.session.SessionManagementFilter@594c8879, org.springframework.security.web.access.ExceptionTranslationFilter@61207d28, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3db8ca0e]
+2022-01-30 20:00:26.228  INFO 17844 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 12.255 seconds (JVM running for 14.198)
+2022-01-30 20:00:26.568  INFO 17844 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:00:26.581  INFO 17844 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:00:26.585  INFO 17844 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 20:00:26.602  INFO 17844 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 20:05:32.333  INFO 13772 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 13772 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 20:05:32.364  INFO 13772 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 20:05:34.284  INFO 13772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 20:05:34.421  INFO 13772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 7 JPA repository interfaces.
+2022-01-30 20:05:35.211  INFO 13772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 20:05:35.219  WARN 13772 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 20:05:35.578  INFO 13772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 20:05:37.085  INFO 13772 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:05:37.095  INFO 13772 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:05:37.098  INFO 13772 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 20:05:37.167  INFO 13772 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 20:05:37.518  INFO 13772 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 20:05:37.521  INFO 13772 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 20:05:37.522  INFO 13772 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 20:05:37.523  INFO 13772 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 20:05:37.572  INFO 13772 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 20:05:37.680  INFO 13772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 20:05:37.774  INFO 13772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 20:05:38.275  INFO 13772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 20:05:38.663  INFO 13772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 20:05:39.623  INFO 13772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 20:05:39.634  INFO 13772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:05:40.230  WARN 13772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 20:05:41.631  INFO 13772 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 20:05:41.860  INFO 13772 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 20:05:42.207  INFO 13772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:05:42.853  INFO 13772 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e0c5743, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cb6c8a6, org.springframework.security.web.header.HeaderWriterFilter@42f814cd, org.springframework.security.web.authentication.logout.LogoutFilter@51ce22e3, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@46565184, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ae9ea0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60b33bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9bd43b7, org.springframework.security.web.session.SessionManagementFilter@29dee1de, org.springframework.security.web.access.ExceptionTranslationFilter@555b43ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26647ac8]
+2022-01-30 20:05:43.527  INFO 13772 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 11.815 seconds (JVM running for 13.698)
+2022-01-30 20:05:43.806  INFO 13772 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:05:43.819  INFO 13772 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:05:43.823  INFO 13772 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 20:05:43.839  INFO 13772 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 20:06:58.397  INFO 7140 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 7140 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 20:06:58.399  INFO 7140 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 20:06:59.929  INFO 7140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 20:07:00.037  INFO 7140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 7 JPA repository interfaces.
+2022-01-30 20:07:00.777  INFO 7140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 20:07:00.785  WARN 7140 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 20:07:01.077  INFO 7140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 20:07:02.417  INFO 7140 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:07:02.427  INFO 7140 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:07:02.429  INFO 7140 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 20:07:02.484  INFO 7140 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 20:07:02.830  INFO 7140 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 20:07:02.832  INFO 7140 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 20:07:02.833  INFO 7140 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 20:07:02.834  INFO 7140 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 20:07:02.877  INFO 7140 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 20:07:02.987  INFO 7140 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 20:07:03.067  INFO 7140 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 20:07:03.310  INFO 7140 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 20:07:03.682  INFO 7140 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 20:07:04.558  INFO 7140 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 20:07:04.571  INFO 7140 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:07:05.116  WARN 7140 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 20:07:06.395  INFO 7140 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 20:07:06.607  INFO 7140 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 20:07:06.993  INFO 7140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:07:07.627  INFO 7140 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61267fa2, org.springframework.security.web.context.SecurityContextPersistenceFilter@924c964, org.springframework.security.web.header.HeaderWriterFilter@604c9f59, org.springframework.security.web.authentication.logout.LogoutFilter@59c68ed3, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@54dd2962, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60b33bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@286bd902, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@181f61b4, org.springframework.security.web.session.SessionManagementFilter@4080ea09, org.springframework.security.web.access.ExceptionTranslationFilter@3ad7a94, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@533e74c5]
+2022-01-30 20:07:08.319  INFO 7140 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 10.378 seconds (JVM running for 11.518)
+2022-01-30 20:07:08.658  INFO 7140 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:07:08.670  INFO 7140 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:07:08.673  INFO 7140 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 20:07:08.691  INFO 7140 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 20:11:10.725  INFO 4960 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 4960 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 20:11:10.727  INFO 4960 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 20:11:12.976  INFO 4960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 20:11:13.160  INFO 4960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 7 JPA repository interfaces.
+2022-01-30 20:11:14.094  INFO 4960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 20:11:14.103  WARN 4960 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 20:11:14.464  INFO 4960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 20:11:15.876  INFO 4960 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:11:15.889  INFO 4960 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:11:15.893  INFO 4960 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 20:11:15.955  INFO 4960 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 20:11:16.284  INFO 4960 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 20:11:16.286  INFO 4960 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 20:11:16.287  INFO 4960 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 20:11:16.288  INFO 4960 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 20:11:16.330  INFO 4960 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 20:11:16.458  INFO 4960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 20:11:16.567  INFO 4960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 20:11:16.834  INFO 4960 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 20:11:17.230  INFO 4960 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 20:11:18.320  INFO 4960 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 20:11:18.331  INFO 4960 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:11:19.486  WARN 4960 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 20:11:20.758  INFO 4960 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 20:11:21.118  INFO 4960 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 20:11:21.435  INFO 4960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:11:22.038  INFO 4960 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c601487, org.springframework.security.web.context.SecurityContextPersistenceFilter@60b33bc, org.springframework.security.web.header.HeaderWriterFilter@3178f903, org.springframework.security.web.authentication.logout.LogoutFilter@7343df40, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@1e69a9c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7215172a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78a4764f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23c21550, org.springframework.security.web.session.SessionManagementFilter@4e33a209, org.springframework.security.web.access.ExceptionTranslationFilter@6b133599, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@494e6dbb]
+2022-01-30 20:11:22.605  INFO 4960 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 12.559 seconds (JVM running for 14.001)
+2022-01-30 20:11:22.956  INFO 4960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:11:22.970  INFO 4960 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:11:22.973  INFO 4960 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 20:11:22.989  INFO 4960 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-30 20:16:21.321  INFO 19832 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 16 on DESKTOP-M01BM6M with PID 19832 (started by Lenovo in D:\YandexZenAPI)
+2022-01-30 20:16:21.323  INFO 19832 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: prod
+2022-01-30 20:16:23.075  INFO 19832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-30 20:16:23.183  INFO 19832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 7 JPA repository interfaces.
+2022-01-30 20:16:24.011  INFO 19832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-30 20:16:24.019  WARN 19832 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-30 20:16:24.280  INFO 19832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-30 20:16:25.483  INFO 19832 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:16:25.491  INFO 19832 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-30 20:16:25.494  INFO 19832 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-30 20:16:25.595  INFO 19832 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-30 20:16:25.878  INFO 19832 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-30 20:16:25.880  INFO 19832 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-30 20:16:25.881  INFO 19832 --- [main] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-30 20:16:25.881  INFO 19832 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-30 20:16:25.938  INFO 19832 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-30 20:16:26.036  INFO 19832 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-30 20:16:26.123  INFO 19832 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-30 20:16:26.341  INFO 19832 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-30 20:16:26.540  INFO 19832 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-30 20:16:27.373  INFO 19832 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-30 20:16:27.392  INFO 19832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:16:27.840  WARN 19832 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-30 20:16:28.996  INFO 19832 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-30 20:16:29.172  INFO 19832 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-30 20:16:29.430  INFO 19832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:16:29.964  INFO 19832 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6028b018, org.springframework.security.web.context.SecurityContextPersistenceFilter@62c732d2, org.springframework.security.web.header.HeaderWriterFilter@640b5373, org.springframework.security.web.authentication.logout.LogoutFilter@482f59f4, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@2e47ec5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7740d2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fb03f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67fc98fe, org.springframework.security.web.session.SessionManagementFilter@7a1bcfb1, org.springframework.security.web.access.ExceptionTranslationFilter@6c73d88c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1222d0e4]
+2022-01-30 20:16:30.685  INFO 19832 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 9.9 seconds (JVM running for 11.418)
+2022-01-30 20:16:31.032  INFO 19832 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-30 20:16:31.047  INFO 19832 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-30 20:16:31.050  INFO 19832 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-30 20:16:31.062  INFO 19832 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

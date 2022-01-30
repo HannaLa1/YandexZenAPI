@@ -19,10 +19,10 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: user_id
+                  name: post_id
                   type: bigint
                   constraints:
-                    foreignKeyName: fk1_user_id
-                    referencedTableName: users
+                    foreignKeyName: post_id_fk
+                    referencedTableName: posts
                     referencedColumnNames: id
                     deleteCascade: true

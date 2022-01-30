@@ -4,6 +4,8 @@ import by.tms.yandexzenapi.dto.subscriber.SubscriberDTO;
 import by.tms.yandexzenapi.mapper.subscriber.SubscriberMapper;
 import by.tms.yandexzenapi.model.Subscriber;
 import by.tms.yandexzenapi.service.SubscriberService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,7 @@ public class SubscriberController {
     private final SubscriberMapper subscriberMapper;
 
     @PostMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<SubscriberDTO> subscribe(@PathVariable long id, @RequestBody SubscriberDTO subscriberDTO){
         if (service.existByUserId(id, subscriberDTO.getUsername())){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -33,6 +36,7 @@ public class SubscriberController {
     }
 
     @GetMapping("/all/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<List<SubscriberDTO>> findAll(@PathVariable long id){
         List<SubscriberDTO> subscribers = subscriberMapper.toSubscriberDTOList(service.findAll(id));
 
@@ -40,6 +44,7 @@ public class SubscriberController {
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<SubscriberDTO> unsubscribe(@PathVariable long id){
         final Subscriber subscriber = service.findById(id);
 

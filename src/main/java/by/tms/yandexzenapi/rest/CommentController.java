@@ -4,6 +4,8 @@ import by.tms.yandexzenapi.dto.comment.CommentDTO;
 import by.tms.yandexzenapi.mapper.comment.CommentMapper;
 import by.tms.yandexzenapi.model.Comment;
 import by.tms.yandexzenapi.service.CommentService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,7 @@ public class CommentController {
     private final CommentMapper commentMapper;
 
     @PostMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<CommentDTO> save(@PathVariable long id, @RequestBody CommentDTO commentDTO){
         Comment comment = service.save(id, commentMapper.toComment(commentDTO));
 
@@ -29,6 +32,7 @@ public class CommentController {
     }
 
     @GetMapping("/all/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<List<CommentDTO>> findAll(@PathVariable long id){
         List<CommentDTO> comments = commentMapper.toCommentDTOList(service.findAll(id));
 
@@ -36,6 +40,7 @@ public class CommentController {
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<CommentDTO> delete(@PathVariable long id){
         final Comment comment = service.findById(id);
 
@@ -48,6 +53,7 @@ public class CommentController {
     }
 
     @PutMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<CommentDTO> update(@PathVariable long id, @RequestBody CommentDTO commentDTO){
         Comment updatedComment = service.update(id, commentMapper.toComment(commentDTO));
 

@@ -6,6 +6,8 @@ import by.tms.yandexzenapi.mapper.user.UserAdminMapper;
 import by.tms.yandexzenapi.mapper.user.UserMapper;
 import by.tms.yandexzenapi.model.User;
 import by.tms.yandexzenapi.service.UserService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,7 @@ public class UserController {
     private final UserAdminMapper userAdminMapper;
 
     @GetMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<UserAdminDTO> findById(@PathVariable long id) {
         final User user = service.findById(id);
 
@@ -34,6 +37,7 @@ public class UserController {
     }
 
     @GetMapping("/all")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<List<UserAdminDTO>> findAll(){
         final List<UserAdminDTO> users = userAdminMapper.toUserAdminDTOList(service.findAll());
 
@@ -43,6 +47,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<UserAdminDTO> delete(@PathVariable long id){
         final User user = service.findById(id);
 
@@ -55,6 +60,7 @@ public class UserController {
     }
 
     @PutMapping("/{username}")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<UserDTO> update(@PathVariable String username, @RequestBody UserDTO userDTO){
         User updatedUser = service.update(username, userMapper.toUser(userDTO));
 

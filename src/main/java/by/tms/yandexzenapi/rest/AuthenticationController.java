@@ -6,6 +6,8 @@ import by.tms.yandexzenapi.mapper.user.UserMapper;
 import by.tms.yandexzenapi.model.User;
 import by.tms.yandexzenapi.security.jwt.JWTTokenProvider;
 import by.tms.yandexzenapi.service.UserService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -38,6 +40,7 @@ public class AuthenticationController {
     private final JWTTokenProvider jwtTokenProvider;
 
     @PostMapping("/logIn")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<Map<Object, Object>> logIn(@RequestBody AuthRequestDTO requestDto){
 
         try {
@@ -58,6 +61,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/reg")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<UserDTO> registration(@Valid @RequestBody UserDTO userDTO){
 
         if (service.existByUsername(userDTO.getUsername()) || service.existByEmail(userDTO.getEmail())){
@@ -70,6 +74,7 @@ public class AuthenticationController {
     }
 
     @GetMapping("/logout")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<Map<Object, Object>> logOut(HttpSession session, HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Map<Object, Object> resp = new HashMap<>();
