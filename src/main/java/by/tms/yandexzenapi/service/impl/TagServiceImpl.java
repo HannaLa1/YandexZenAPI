@@ -9,7 +9,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -68,7 +71,13 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public List<Tag> findAllTagsOfPosts() {
-        List<Tag> tags = tagRepository.findAll();
+        List<Tag> tags = tagRepository.findAllTagsOfPosts().stream()
+                .sorted(Comparator.comparing(Tag::getName)
+                        .thenComparing(tag -> tag.getPost().getDateOfCreation())
+                        .thenComparing(tag -> tag.getPost().getUser().getSubscriberCounter())
+                        .thenComparing(tag -> tag.getPost().getCommentCounter())
+                        .thenComparing(tag -> tag.getPost().getLikeCounter()).reversed())
+                .collect(Collectors.toList());
 
         if (tags.isEmpty()){
             throw new RuntimeException("No tags found!");
@@ -91,4 +100,10 @@ public class TagServiceImpl implements TagService {
 
         return tags;
     }
+
+    private static <T> Predicate<T> distinctByKey(Function<? super T, ?> keyExtractor) {
+        List<Object> seen = new ArrayList<>();
+        return t -> seen.add(keyExtractor.apply(t));
+    }
+
 }

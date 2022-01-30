@@ -26,7 +26,7 @@ public class TagController {
     private final TagMapper tagMapper;
     private final TagPostMapper tagUserMapper;
 
-    @PostMapping("/{username}")
+    @PostMapping("/{id}")
     @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<TagDTO> save(@PathVariable long id, @RequestBody TagDTO tagDTO){
         if (service.existByPostId(id, tagDTO.getName())){
