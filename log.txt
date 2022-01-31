@@ -3441,3 +3441,928 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token
 2022-01-31 02:07:52.562  INFO 16912 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-01-31 02:07:52.565  INFO 16912 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-01-31 02:07:52.579  INFO 16912 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-31 13:26:25.769  INFO 14652 --- [restartedMain] b.t.y.YandexZenApiApplication            : Starting YandexZenApiApplication using Java 11.0.13 on DESKTOP-M01BM6M with PID 14652 (D:\YandexZenAPI\target\classes started by Lenovo in D:\YandexZenAPI)
+2022-01-31 13:26:25.790  INFO 14652 --- [restartedMain] b.t.y.YandexZenApiApplication            : The following profiles are active: prod
+2022-01-31 13:26:25.948  INFO 14652 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Lenovo\.m2\repository\org\liquibase\liquibase-core\3.10.2\liquibase-core-3.10.2.jar referenced one or more files that do not exist: file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/commons-cli-1.4.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/snakeyaml-1.24.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/slf4j-api-1.7.28.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/logback-classic-1.2.3.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/logback-core-1.2.3.jar
+2022-01-31 13:26:25.962  INFO 14652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-31 13:26:25.963  INFO 14652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-31 13:26:27.364  INFO 14652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 13:26:27.437  INFO 14652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 7 JPA repository interfaces.
+2022-01-31 13:26:28.009  INFO 14652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-31 13:26:28.017  INFO 14652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-31 13:26:28.017  INFO 14652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-01-31 13:26:28.112  INFO 14652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-31 13:26:28.112  INFO 14652 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2148 ms
+2022-01-31 13:26:28.230  INFO 14652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-31 13:26:28.233  WARN 14652 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-31 13:26:28.455  INFO 14652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-31 13:26:28.462  INFO 14652 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC'
+2022-01-31 13:26:29.501  INFO 14652 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-31 13:26:29.509  INFO 14652 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-31 13:26:29.511  INFO 14652 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-31 13:26:29.593  INFO 14652 --- [restartedMain] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-31 13:26:29.867  INFO 14652 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-31 13:26:29.869  INFO 14652 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-31 13:26:29.870  INFO 14652 --- [restartedMain] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-31 13:26:29.870  INFO 14652 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-31 13:26:29.906  INFO 14652 --- [restartedMain] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-31 13:26:29.962  INFO 14652 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 13:26:30.013  INFO 14652 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-31 13:26:30.158  INFO 14652 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-31 13:26:30.290  INFO 14652 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-31 13:26:30.959  INFO 14652 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 13:26:30.969  INFO 14652 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 13:26:31.299  WARN 14652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-31 13:26:31.858  INFO 14652 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-31 13:26:31.933  INFO 14652 --- [restartedMain] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-31 13:26:32.013  INFO 14652 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-31 13:26:32.044  INFO 14652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-31 13:26:32.347  INFO 14652 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fdf3727, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f564efa, org.springframework.security.web.header.HeaderWriterFilter@5c2076bd, org.springframework.security.web.authentication.logout.LogoutFilter@b3aa355, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@3097b0bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ff5f09f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a9e877c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d4bc42c, org.springframework.security.web.session.SessionManagementFilter@3edf0cc6, org.springframework.security.web.access.ExceptionTranslationFilter@3b920558, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31ddf8b2]
+2022-01-31 13:26:32.436  INFO 14652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-31 13:26:32.751  INFO 14652 --- [restartedMain] b.t.y.YandexZenApiApplication            : Started YandexZenApiApplication in 7.937 seconds (JVM running for 9.314)
+2022-01-31 13:26:33.058  INFO 14652 --- [RMI TCP Connection(1)-172.25.112.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-31 13:26:33.060  INFO 14652 --- [RMI TCP Connection(1)-172.25.112.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-31 13:26:33.062  INFO 14652 --- [RMI TCP Connection(1)-172.25.112.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-31 13:29:04.523 ERROR 14652 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+
+by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.1.jar:2.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-01-31 13:29:04.527 ERROR 14652 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-01-31 13:29:04.528 ERROR 14652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+javax.servlet.ServletException: Filter execution threw an exception
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	... 31 common frames omitted
+
+2022-01-31 13:29:12.566  INFO 14652 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-31 13:29:12.574  INFO 14652 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 13:29:12.602  INFO 14652 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-31 13:29:12.615  INFO 14652 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-31 13:29:32.926  INFO 9516 --- [restartedMain] b.t.y.YandexZenApiApplication            : Starting YandexZenApiApplication using Java 11.0.13 on DESKTOP-M01BM6M with PID 9516 (D:\YandexZenAPI\target\classes started by Lenovo in D:\YandexZenAPI)
+2022-01-31 13:29:32.930  INFO 9516 --- [restartedMain] b.t.y.YandexZenApiApplication            : The following profiles are active: prod
+2022-01-31 13:29:33.004  INFO 9516 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Lenovo\.m2\repository\org\liquibase\liquibase-core\3.10.2\liquibase-core-3.10.2.jar referenced one or more files that do not exist: file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/commons-cli-1.4.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/snakeyaml-1.24.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/slf4j-api-1.7.28.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/logback-classic-1.2.3.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/logback-core-1.2.3.jar
+2022-01-31 13:29:33.005  INFO 9516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-31 13:29:33.005  INFO 9516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-31 13:29:34.208  INFO 9516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 13:29:34.306  INFO 9516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2022-01-31 13:29:34.862  INFO 9516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-31 13:29:34.873  INFO 9516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-31 13:29:34.873  INFO 9516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-01-31 13:29:34.967  INFO 9516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-31 13:29:34.967  INFO 9516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1961 ms
+2022-01-31 13:29:35.067  INFO 9516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-31 13:29:35.069  WARN 9516 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-01-31 13:29:35.209  INFO 9516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-31 13:29:35.214  INFO 9516 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC'
+2022-01-31 13:29:36.160  INFO 9516 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-31 13:29:36.165  INFO 9516 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOGLOCK
+2022-01-31 13:29:36.167  INFO 9516 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM yandexzen.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-31 13:29:36.265  INFO 9516 --- [restartedMain] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-31 13:29:36.475  INFO 9516 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM yandexzen.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2022-01-31 13:29:36.476  INFO 9516 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM yandexzen.DATABASECHANGELOG
+2022-01-31 13:29:36.477  INFO 9516 --- [restartedMain] l.c.StandardChangeLogHistoryService      : Reading from yandexzen.DATABASECHANGELOG
+2022-01-31 13:29:36.477  INFO 9516 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM yandexzen.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-31 13:29:36.512  INFO 9516 --- [restartedMain] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-31 13:29:36.564  INFO 9516 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 13:29:36.610  INFO 9516 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-31 13:29:36.756  INFO 9516 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-31 13:29:36.846  INFO 9516 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-31 13:29:37.476  INFO 9516 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 13:29:37.485  INFO 9516 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 13:29:37.795  WARN 9516 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-31 13:29:38.329  INFO 9516 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-31 13:29:38.409  INFO 9516 --- [restartedMain] b.t.yandexzenapi.config.DBConfiguration  : DB connection for PROD - MySQL, driver-class-name: com.mysql.jdbc.Driver, url : jdbc:mysql://localhost:3306/yandexzen?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+2022-01-31 13:29:38.488  INFO 9516 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-31 13:29:38.522  INFO 9516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-31 13:29:38.786  INFO 9516 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42ff476e, org.springframework.security.web.context.SecurityContextPersistenceFilter@42e72f87, org.springframework.security.web.header.HeaderWriterFilter@7ab8d28a, org.springframework.security.web.authentication.logout.LogoutFilter@193fa7d1, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@6fbf4cc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@698b4ad4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75fc85e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3de8b42c, org.springframework.security.web.session.SessionManagementFilter@701f8797, org.springframework.security.web.access.ExceptionTranslationFilter@497a3bfb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78d2e89c]
+2022-01-31 13:29:38.888  INFO 9516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-31 13:29:39.231  INFO 9516 --- [restartedMain] b.t.y.YandexZenApiApplication            : Started YandexZenApiApplication in 6.908 seconds (JVM running for 8.051)
+2022-01-31 13:29:39.639  INFO 9516 --- [RMI TCP Connection(3)-172.25.112.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-31 13:29:39.640  INFO 9516 --- [RMI TCP Connection(3)-172.25.112.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-31 13:29:39.641  INFO 9516 --- [RMI TCP Connection(3)-172.25.112.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-31 13:30:01.415 ERROR 9516 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+
+by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.1.jar:2.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-01-31 13:30:01.420 ERROR 9516 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-01-31 13:30:01.421 ERROR 9516 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+javax.servlet.ServletException: Filter execution threw an exception
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	... 31 common frames omitted
+
+2022-01-31 13:30:10.919  INFO 9516 --- [http-nio-8080-exec-4] b.t.y.service.impl.UserServiceImpl       : In method findByUsername - user: User(id=1, username=John5, password=$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym, firstName=John, lastName=Hill, email=john33@gmail.com, country=Norway, birthDate=1991-09-19, subscriberCounter=2, roleList=[Role{id=1, typeOfRole='ADMIN'}], status=ACTIVE) successfully found by username John5
+2022-01-31 13:30:10.938  INFO 9516 --- [http-nio-8080-exec-4] b.t.y.security.JWTUserDetailsService     : In method loadUserByUsername - user with username: John5 successfully loaded
+2022-01-31 13:30:11.280  INFO 9516 --- [http-nio-8080-exec-4] b.t.y.service.impl.UserServiceImpl       : In method findByUsername - user: User(id=1, username=John5, password=$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym, firstName=John, lastName=Hill, email=john33@gmail.com, country=Norway, birthDate=1991-09-19, subscriberCounter=2, roleList=[Role{id=1, typeOfRole='ADMIN'}], status=ACTIVE) successfully found by username John5
+2022-01-31 13:30:24.561 ERROR 9516 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+
+by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.1.jar:2.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-01-31 13:30:24.563 ERROR 9516 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-01-31 13:30:24.564 ERROR 9516 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+javax.servlet.ServletException: Filter execution threw an exception
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: by.tms.yandexzenapi.security.jwt.JWTAuthenticationException: JWT token is expired or invalid
+	at by.tms.yandexzenapi.security.jwt.JWTTokenProvider.validateToken(JWTTokenProvider.java:83) ~[classes/:na]
+	at by.tms.yandexzenapi.security.jwt.JWTTokenFilter.doFilter(JWTTokenFilter.java:24) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.2.jar:5.3.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	... 31 common frames omitted
+
+2022-01-31 13:30:42.522  INFO 9516 --- [http-nio-8080-exec-7] b.t.y.service.impl.UserServiceImpl       : In method findByUsername - user: User(id=1, username=John5, password=$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym, firstName=John, lastName=Hill, email=john33@gmail.com, country=Norway, birthDate=1991-09-19, subscriberCounter=2, roleList=[Role{id=1, typeOfRole='ADMIN'}], status=ACTIVE) successfully found by username John5
+2022-01-31 13:30:42.523  INFO 9516 --- [http-nio-8080-exec-7] b.t.y.security.JWTUserDetailsService     : In method loadUserByUsername - user with username: John5 successfully loaded
+2022-01-31 13:30:42.851  INFO 9516 --- [http-nio-8080-exec-7] b.t.y.service.impl.UserServiceImpl       : In method findByUsername - user: User(id=1, username=John5, password=$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym, firstName=John, lastName=Hill, email=john33@gmail.com, country=Norway, birthDate=1991-09-19, subscriberCounter=2, roleList=[Role{id=1, typeOfRole='ADMIN'}], status=ACTIVE) successfully found by username John5
+2022-01-31 13:31:01.993  INFO 9516 --- [http-nio-8080-exec-8] b.t.y.service.impl.UserServiceImpl       : In method findByUsername - user: User(id=1, username=John5, password=$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym, firstName=John, lastName=Hill, email=john33@gmail.com, country=Norway, birthDate=1991-09-19, subscriberCounter=2, roleList=[Role{id=1, typeOfRole='ADMIN'}], status=ACTIVE) successfully found by username John5
+2022-01-31 13:31:01.993  INFO 9516 --- [http-nio-8080-exec-8] b.t.y.security.JWTUserDetailsService     : In method loadUserByUsername - user with username: John5 successfully loaded
+2022-01-31 13:31:02.031  INFO 9516 --- [http-nio-8080-exec-8] b.t.y.service.impl.TagServiceImpl        : In method findAllTagsOfUsers - found 10 tags of posts}
+2022-01-31 13:31:07.599  INFO 9516 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-31 13:31:07.606  INFO 9516 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 13:31:07.612  INFO 9516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-31 13:31:07.639  INFO 9516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-31 15:05:16.566  INFO 20252 --- [restartedMain] b.t.y.YandexZenApiApplication            : Starting YandexZenApiApplication using Java 11.0.13 on DESKTOP-M01BM6M with PID 20252 (D:\YandexZenAPI\target\classes started by Lenovo in D:\YandexZenAPI)
+2022-01-31 15:05:16.570  INFO 20252 --- [restartedMain] b.t.y.YandexZenApiApplication            : The following profiles are active: dev
+2022-01-31 15:05:16.688  INFO 20252 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Lenovo\.m2\repository\org\liquibase\liquibase-core\3.10.2\liquibase-core-3.10.2.jar referenced one or more files that do not exist: file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/commons-cli-1.4.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/snakeyaml-1.24.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/slf4j-api-1.7.28.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/logback-classic-1.2.3.jar,file:/C:/Users/Lenovo/.m2/repository/org/liquibase/liquibase-core/3.10.2/logback-core-1.2.3.jar
+2022-01-31 15:05:16.689  INFO 20252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-31 15:05:16.690  INFO 20252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-31 15:05:18.282  INFO 20252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 15:05:18.370  INFO 20252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 7 JPA repository interfaces.
+2022-01-31 15:05:18.970  INFO 20252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-31 15:05:18.979  INFO 20252 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-31 15:05:18.979  INFO 20252 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-01-31 15:05:19.061  INFO 20252 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-31 15:05:19.062  INFO 20252 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2371 ms
+2022-01-31 15:05:19.158  INFO 20252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-31 15:05:19.288  INFO 20252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-31 15:05:19.293  INFO 20252 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db'. Database available at 'jdbc:h2:mem:db'
+2022-01-31 15:05:20.254  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 15:05:20.261  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2022-01-31 15:05:20.267  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 15:05:20.270  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 15:05:20.272  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2022-01-31 15:05:20.302  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-31 15:05:20.312  INFO 20252 --- [restartedMain] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-31 15:05:20.512  INFO 20252 --- [restartedMain] l.c.StandardChangeLogHistoryService      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2022-01-31 15:05:20.513  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2022-01-31 15:05:20.515  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2022-01-31 15:05:20.515  INFO 20252 --- [restartedMain] l.c.StandardChangeLogHistoryService      : Reading from PUBLIC.DATABASECHANGELOG
+2022-01-31 15:05:20.516  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-31 15:05:20.517  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 15:05:20.555  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.users (id BIGINT AUTO_INCREMENT NOT NULL, username VARCHAR(100) NOT NULL, password VARCHAR(255) NOT NULL, first_name VARCHAR(100) NOT NULL, last_name VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, country VARCHAR(100) NOT NULL, birth_date date NOT NULL, subscriber_counter INT(10), status VARCHAR(100) NOT NULL, CONSTRAINT PK_USERS PRIMARY KEY (id))
+2022-01-31 15:05:20.560  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table users created
+2022-01-31 15:05:20.560  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-user-table.yaml::create-user::Anna ran successfully in 7ms
+2022-01-31 15:05:20.561  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2022-01-31 15:05:20.565  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-user', 'Anna', 'db/changelog/changeset/create-user-table.yaml', NOW(), 1, '8:ead51dd676f548379343c8aa11ed0050', 'createTable tableName=users', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.586  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.roles (id BIGINT AUTO_INCREMENT NOT NULL, type_of_role VARCHAR(100) NOT NULL, user_id BIGINT, CONSTRAINT PK_ROLES PRIMARY KEY (id), CONSTRAINT fk2_user_id FOREIGN KEY (user_id) REFERENCES PUBLIC.users(id) ON DELETE CASCADE)
+2022-01-31 15:05:20.596  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table roles created
+2022-01-31 15:05:20.596  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-role-table.yaml::create-role::Anna ran successfully in 11ms
+2022-01-31 15:05:20.597  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-role', 'Anna', 'db/changelog/changeset/create-role-table.yaml', NOW(), 2, '8:a83238ea681c5686ba441bb7f847ad8f', 'createTable tableName=roles', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.598  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.posts (id BIGINT AUTO_INCREMENT NOT NULL, title VARCHAR(100) NOT NULL, description VARCHAR(100) NOT NULL, date_of_creation date NOT NULL, comment_counter INT(10), like_counter INT(10), user_id BIGINT, CONSTRAINT PK_POSTS PRIMARY KEY (id), CONSTRAINT fk3_user_id FOREIGN KEY (user_id) REFERENCES PUBLIC.users(id) ON DELETE CASCADE)
+2022-01-31 15:05:20.601  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table posts created
+2022-01-31 15:05:20.601  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-post-table.yaml::create-post::Anna ran successfully in 3ms
+2022-01-31 15:05:20.602  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-post', 'Anna', 'db/changelog/changeset/create-post-table.yaml', NOW(), 3, '8:77f00d43dc3f03886e48b713211b4d5f', 'createTable tableName=posts', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.603  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.subscribers (id BIGINT AUTO_INCREMENT NOT NULL, username VARCHAR(100) NOT NULL, user_id BIGINT, CONSTRAINT PK_SUBSCRIBERS PRIMARY KEY (id), CONSTRAINT fk4_user_id FOREIGN KEY (user_id) REFERENCES PUBLIC.users(id) ON DELETE CASCADE)
+2022-01-31 15:05:20.605  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table subscribers created
+2022-01-31 15:05:20.606  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-subscriber-table.yaml::create-subscriber::Anna ran successfully in 3ms
+2022-01-31 15:05:20.606  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-subscriber', 'Anna', 'db/changelog/changeset/create-subscriber-table.yaml', NOW(), 4, '8:b214faeeb20680a39ed686b1ad5b3421', 'createTable tableName=subscribers', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.608  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.tags (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(100) NOT NULL, post_id BIGINT, CONSTRAINT PK_TAGS PRIMARY KEY (id), CONSTRAINT post_id_fk FOREIGN KEY (post_id) REFERENCES PUBLIC.posts(id) ON DELETE CASCADE)
+2022-01-31 15:05:20.610  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table tags created
+2022-01-31 15:05:20.610  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-tag-table.yaml::create-tag::Anna ran successfully in 3ms
+2022-01-31 15:05:20.611  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-tag', 'Anna', 'db/changelog/changeset/create-tag-table.yaml', NOW(), 5, '8:cfc3d132dd96ebf2502b6ca8119eb6a9', 'createTable tableName=tags', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.612  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.comments (id BIGINT AUTO_INCREMENT NOT NULL, name_of_user VARCHAR(100) NOT NULL, date_of_comment TIMESTAMP NOT NULL, description_of_comment VARCHAR(200) NOT NULL, post_id BIGINT, CONSTRAINT PK_COMMENTS PRIMARY KEY (id), CONSTRAINT post_id_fk1 FOREIGN KEY (post_id) REFERENCES PUBLIC.posts(id) ON DELETE CASCADE)
+2022-01-31 15:05:20.614  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table comments created
+2022-01-31 15:05:20.615  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-comment-table.yaml::create-comment::Anna ran successfully in 3ms
+2022-01-31 15:05:20.615  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-comment', 'Anna', 'db/changelog/changeset/create-comment-table.yaml', NOW(), 6, '8:9e6aa5b2986afc98c2ce73bca9a4bab1', 'createTable tableName=comments', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.616  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.likes (id BIGINT AUTO_INCREMENT NOT NULL, name_of_user VARCHAR(100) NOT NULL, post_id BIGINT, CONSTRAINT PK_LIKES PRIMARY KEY (id), CONSTRAINT post_id_fk2 FOREIGN KEY (post_id) REFERENCES PUBLIC.posts(id) ON DELETE CASCADE)
+2022-01-31 15:05:20.618  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Table likes created
+2022-01-31 15:05:20.619  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-like-table.yaml::create-like::Anna ran successfully in 3ms
+2022-01-31 15:05:20.619  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-like', 'Anna', 'db/changelog/changeset/create-like-table.yaml', NOW(), 7, '8:2b6d7dd030e48364f566e3e1fd5fae98', 'createTable tableName=likes', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.628  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into users (username, password, first_name, last_name, email, country, birth_date, subscriber_counter, status) values ('John5', '$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym', 'John', 'Hill', 'john33@gmail.com', 'Norway', '1991-09-19', 2, 'ACTIVE')
+2022-01-31 15:05:20.629  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.630  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into users (username, password, first_name, last_name, email, country, birth_date, subscriber_counter, status) values ('Mike6', '$2a$12$dEofCsayuAs/j4XQqPDqWu6Dv5hPn7BkXaFREiVUlrIBJRAtIhciu', 'Michel', 'Kim', 'mike5@mail.ru', 'Germany', '2000-10-08', 1, 'ACTIVE')
+2022-01-31 15:05:20.630  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.631  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into users (username, password, first_name, last_name, email, country, birth_date, subscriber_counter, status) values ('Vanya_', '$2a$12$3lj3ALEzZVCrK/BA9fXEoucAfE8lg6z5zoXyusIF3F.eKJ/o0k9c6', 'Ivan', 'Jui', 'ivan4@gmail.com', 'Spain', '1999-08-19', 2, 'ACTIVE')
+2022-01-31 15:05:20.632  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.632  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-user.yaml::insert-user::Anna ran successfully in 12ms
+2022-01-31 15:05:20.633  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-user', 'Anna', 'db/changelog/changeset/insert-user.yaml', NOW(), 8, '8:2519d6bc07b8416fd909ce9fe1595244', 'sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.634  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into roles (type_of_role, user_id) values ('ADMIN', 1)
+2022-01-31 15:05:20.635  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.635  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into roles (type_of_role, user_id) values ('USER', 2)
+2022-01-31 15:05:20.636  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.636  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into roles (type_of_role, user_id) values ('USER', 3)
+2022-01-31 15:05:20.658  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.659  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-role.yaml::insert-role::Anna ran successfully in 25ms
+2022-01-31 15:05:20.659  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-role', 'Anna', 'db/changelog/changeset/insert-role.yaml', NOW(), 9, '8:24d86aab2544267a67ddc30643804a27', 'sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.661  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title1', 'description1', '2020-09-25', 1, 1, 1)
+2022-01-31 15:05:20.661  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.662  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title2', 'description2', '2021-10-20', 2, 1, 1)
+2022-01-31 15:05:20.662  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.663  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title3', 'description3', '2019-01-09', 1, 2, 2)
+2022-01-31 15:05:20.663  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.664  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title4', 'description4', '2021-03-15', 2, 2, 2)
+2022-01-31 15:05:20.665  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.665  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title5', 'description5', '2021-07-16', 1, 1, 3)
+2022-01-31 15:05:20.666  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.666  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-post.yaml::insert-post::Anna ran successfully in 6ms
+2022-01-31 15:05:20.666  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-post', 'Anna', 'db/changelog/changeset/insert-post.yaml', NOW(), 10, '8:c8aa8920bbfbd9af775c99845940f84b', 'sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.667  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('Sam12', 1)
+2022-01-31 15:05:20.668  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.668  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('Tom_9', 1)
+2022-01-31 15:05:20.669  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.669  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('Bob1666', 2)
+2022-01-31 15:05:20.669  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.670  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('NickY2', 3)
+2022-01-31 15:05:20.670  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.670  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('German_0', 3)
+2022-01-31 15:05:20.671  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.671  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-subscriber.yaml::insert-subscriber::Anna ran successfully in 4ms
+2022-01-31 15:05:20.671  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-subscriber', 'Anna', 'db/changelog/changeset/insert-subscriber.yaml', NOW(), 11, '8:ebd90a3ed2f47741914f1e438721d8ac', 'sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.672  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('dog', 1)
+2022-01-31 15:05:20.673  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.673  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('politics', 2)
+2022-01-31 15:05:20.674  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.674  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('physics', 2)
+2022-01-31 15:05:20.675  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.675  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('science', 3)
+2022-01-31 15:05:20.676  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.676  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('biology', 4)
+2022-01-31 15:05:20.676  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.677  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('cat', 4)
+2022-01-31 15:05:20.677  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.677  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('mathematics', 5)
+2022-01-31 15:05:20.678  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.678  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-tag.yaml::insert-tag::Anna ran successfully in 6ms
+2022-01-31 15:05:20.679  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-tag', 'Anna', 'db/changelog/changeset/insert-tag.yaml', NOW(), 12, '8:247c1375a18b2137731a16d607194aba', 'sql; sql; sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.680  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Ryan_z', '2021-06-19', 'description1', 1)
+2022-01-31 15:05:20.680  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.681  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Mark_pu', '2021-07-01', 'description2', 2)
+2022-01-31 15:05:20.681  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.681  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Uhhw1', '2021-02-27', 'description3', 2)
+2022-01-31 15:05:20.682  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.682  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Orry11', '2020-11-23', 'description4', 3)
+2022-01-31 15:05:20.683  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.683  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Joma_T', '2021-07-11', 'description5', 4)
+2022-01-31 15:05:20.683  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.684  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Olya', '2019-01-14', 'description6', 4)
+2022-01-31 15:05:20.684  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.685  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Nayal_', '2021-08-22', 'description7', 5)
+2022-01-31 15:05:20.685  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.685  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-comment.yaml::insert-comment::Anna ran successfully in 6ms
+2022-01-31 15:05:20.686  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-comment', 'Anna', 'db/changelog/changeset/insert-comment.yaml', NOW(), 13, '8:6628a6ede581c5d7dec89a6186b4c22a', 'sql; sql; sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.687  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Nick_', 1)
+2022-01-31 15:05:20.687  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.688  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Tommy7', 2)
+2022-01-31 15:05:20.688  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.688  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Johny_88', 3)
+2022-01-31 15:05:20.689  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.689  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Molly', 3)
+2022-01-31 15:05:20.689  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.690  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Sammy90', 4)
+2022-01-31 15:05:20.690  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.690  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Abby123', 4)
+2022-01-31 15:05:20.691  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.691  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Odry_Li', 5)
+2022-01-31 15:05:20.692  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 15:05:20.692  INFO 20252 --- [restartedMain] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-like.yaml::insert-like::Anna ran successfully in 6ms
+2022-01-31 15:05:20.692  INFO 20252 --- [restartedMain] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-like', 'Anna', 'db/changelog/changeset/insert-like.yaml', NOW(), 14, '8:870ed1de00ba0a9e9deb684311b0ec89', 'sql; sql; sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3630720517')
+2022-01-31 15:05:20.694  INFO 20252 --- [restartedMain] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-31 15:05:20.812  INFO 20252 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 15:05:20.926  INFO 20252 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-31 15:05:21.048  INFO 20252 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-31 15:05:21.163  INFO 20252 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-31 15:05:21.811  INFO 20252 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 15:05:21.820  INFO 20252 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 15:05:22.172  WARN 20252 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-31 15:05:22.761  INFO 20252 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-31 15:05:22.840  INFO 20252 --- [restartedMain] b.t.yandexzenapi.config.DBConfiguration  : DB connection for DEV - H2, driver-class-name: org.h2.Driver, url : jdbc:h2:mem:db
+2022-01-31 15:05:22.920  INFO 20252 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-31 15:05:22.952  INFO 20252 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-31 15:05:23.248  INFO 20252 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7815d511, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bd49057, org.springframework.security.web.header.HeaderWriterFilter@222da616, org.springframework.security.web.authentication.logout.LogoutFilter@138a210e, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@52540485, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b8ef165, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3367a075, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d6cd207, org.springframework.security.web.session.SessionManagementFilter@66dc5481, org.springframework.security.web.access.ExceptionTranslationFilter@4573b0db, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e067318]
+2022-01-31 15:05:23.348  INFO 20252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-31 15:05:23.673  INFO 20252 --- [restartedMain] b.t.y.YandexZenApiApplication            : Started YandexZenApiApplication in 7.867 seconds (JVM running for 9.062)
+2022-01-31 15:05:24.353  INFO 20252 --- [RMI TCP Connection(3)-172.25.112.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-31 15:05:24.354  INFO 20252 --- [RMI TCP Connection(3)-172.25.112.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-31 15:05:24.356  INFO 20252 --- [RMI TCP Connection(3)-172.25.112.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-31 15:06:20.282  INFO 20252 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-31 15:06:20.290  INFO 20252 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 15:06:20.513  WARN 20252 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-01-31 15:06:20.528  INFO 20252 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-31 15:06:20.560  INFO 20252 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-31 16:26:53.448  INFO 19588 --- [main] b.t.y.YandexZenApiApplicationTests       : Starting YandexZenApiApplicationTests using Java 11.0.13 on DESKTOP-M01BM6M with PID 19588 (started by Lenovo in D:\YandexZenAPI)
+2022-01-31 16:26:53.450  INFO 19588 --- [main] b.t.y.YandexZenApiApplicationTests       : The following profiles are active: dev
+2022-01-31 16:26:56.547  INFO 19588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 16:26:56.653  INFO 19588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 7 JPA repository interfaces.
+2022-01-31 16:26:57.705  INFO 19588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-31 16:26:58.007  INFO 19588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-31 16:27:00.297  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 16:27:00.310  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2022-01-31 16:27:00.316  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 16:27:00.320  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 16:27:00.322  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2022-01-31 16:27:00.325  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2022-01-31 16:27:00.334  INFO 19588 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2022-01-31 16:27:00.663  INFO 19588 --- [main] l.c.StandardChangeLogHistoryService      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2022-01-31 16:27:00.666  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2022-01-31 16:27:00.668  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2022-01-31 16:27:00.668  INFO 19588 --- [main] l.c.StandardChangeLogHistoryService      : Reading from PUBLIC.DATABASECHANGELOG
+2022-01-31 16:27:00.670  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-01-31 16:27:00.671  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2022-01-31 16:27:00.749  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.users (id BIGINT AUTO_INCREMENT NOT NULL, username VARCHAR(100) NOT NULL, password VARCHAR(255) NOT NULL, first_name VARCHAR(100) NOT NULL, last_name VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, country VARCHAR(100) NOT NULL, birth_date date NOT NULL, subscriber_counter INT(10), status VARCHAR(100) NOT NULL, CONSTRAINT PK_USERS PRIMARY KEY (id))
+2022-01-31 16:27:00.764  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table users created
+2022-01-31 16:27:00.764  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-user-table.yaml::create-user::Anna ran successfully in 18ms
+2022-01-31 16:27:00.766  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2022-01-31 16:27:00.776  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-user', 'Anna', 'db/changelog/changeset/create-user-table.yaml', NOW(), 1, '8:ead51dd676f548379343c8aa11ed0050', 'createTable tableName=users', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:00.809  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.roles (id BIGINT AUTO_INCREMENT NOT NULL, type_of_role VARCHAR(100) NOT NULL, user_id BIGINT, CONSTRAINT PK_ROLES PRIMARY KEY (id), CONSTRAINT fk2_user_id FOREIGN KEY (user_id) REFERENCES PUBLIC.users(id) ON DELETE CASCADE)
+2022-01-31 16:27:00.822  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table roles created
+2022-01-31 16:27:00.822  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-role-table.yaml::create-role::Anna ran successfully in 14ms
+2022-01-31 16:27:00.823  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-role', 'Anna', 'db/changelog/changeset/create-role-table.yaml', NOW(), 2, '8:a83238ea681c5686ba441bb7f847ad8f', 'createTable tableName=roles', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:00.827  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.posts (id BIGINT AUTO_INCREMENT NOT NULL, title VARCHAR(100) NOT NULL, description VARCHAR(100) NOT NULL, date_of_creation date NOT NULL, comment_counter INT(10), like_counter INT(10), user_id BIGINT, CONSTRAINT PK_POSTS PRIMARY KEY (id), CONSTRAINT fk3_user_id FOREIGN KEY (user_id) REFERENCES PUBLIC.users(id) ON DELETE CASCADE)
+2022-01-31 16:27:00.831  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table posts created
+2022-01-31 16:27:00.831  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-post-table.yaml::create-post::Anna ran successfully in 6ms
+2022-01-31 16:27:00.833  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-post', 'Anna', 'db/changelog/changeset/create-post-table.yaml', NOW(), 3, '8:77f00d43dc3f03886e48b713211b4d5f', 'createTable tableName=posts', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:00.838  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.subscribers (id BIGINT AUTO_INCREMENT NOT NULL, username VARCHAR(100) NOT NULL, user_id BIGINT, CONSTRAINT PK_SUBSCRIBERS PRIMARY KEY (id), CONSTRAINT fk4_user_id FOREIGN KEY (user_id) REFERENCES PUBLIC.users(id) ON DELETE CASCADE)
+2022-01-31 16:27:00.847  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table subscribers created
+2022-01-31 16:27:00.848  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-subscriber-table.yaml::create-subscriber::Anna ran successfully in 13ms
+2022-01-31 16:27:00.868  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-subscriber', 'Anna', 'db/changelog/changeset/create-subscriber-table.yaml', NOW(), 4, '8:b214faeeb20680a39ed686b1ad5b3421', 'createTable tableName=subscribers', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:00.885  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.tags (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(100) NOT NULL, post_id BIGINT, CONSTRAINT PK_TAGS PRIMARY KEY (id), CONSTRAINT post_id_fk FOREIGN KEY (post_id) REFERENCES PUBLIC.posts(id) ON DELETE CASCADE)
+2022-01-31 16:27:00.902  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table tags created
+2022-01-31 16:27:00.913  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-tag-table.yaml::create-tag::Anna ran successfully in 30ms
+2022-01-31 16:27:00.915  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-tag', 'Anna', 'db/changelog/changeset/create-tag-table.yaml', NOW(), 5, '8:cfc3d132dd96ebf2502b6ca8119eb6a9', 'createTable tableName=tags', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:00.918  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.comments (id BIGINT AUTO_INCREMENT NOT NULL, name_of_user VARCHAR(100) NOT NULL, date_of_comment TIMESTAMP NOT NULL, description_of_comment VARCHAR(200) NOT NULL, post_id BIGINT, CONSTRAINT PK_COMMENTS PRIMARY KEY (id), CONSTRAINT post_id_fk1 FOREIGN KEY (post_id) REFERENCES PUBLIC.posts(id) ON DELETE CASCADE)
+2022-01-31 16:27:00.923  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table comments created
+2022-01-31 16:27:00.944  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-comment-table.yaml::create-comment::Anna ran successfully in 27ms
+2022-01-31 16:27:00.945  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-comment', 'Anna', 'db/changelog/changeset/create-comment-table.yaml', NOW(), 6, '8:9e6aa5b2986afc98c2ce73bca9a4bab1', 'createTable tableName=comments', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:00.949  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE PUBLIC.likes (id BIGINT AUTO_INCREMENT NOT NULL, name_of_user VARCHAR(100) NOT NULL, post_id BIGINT, CONSTRAINT PK_LIKES PRIMARY KEY (id), CONSTRAINT post_id_fk2 FOREIGN KEY (post_id) REFERENCES PUBLIC.posts(id) ON DELETE CASCADE)
+2022-01-31 16:27:00.954  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Table likes created
+2022-01-31 16:27:00.955  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/create-like-table.yaml::create-like::Anna ran successfully in 7ms
+2022-01-31 16:27:00.957  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('create-like', 'Anna', 'db/changelog/changeset/create-like-table.yaml', NOW(), 7, '8:2b6d7dd030e48364f566e3e1fd5fae98', 'createTable tableName=likes', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.263  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into users (username, password, first_name, last_name, email, country, birth_date, subscriber_counter, status) values ('John5', '$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym', 'John', 'Hill', 'john33@gmail.com', 'Norway', '1991-09-19', 2, 'ACTIVE')
+2022-01-31 16:27:01.265  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.268  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into users (username, password, first_name, last_name, email, country, birth_date, subscriber_counter, status) values ('Mike6', '$2a$12$dEofCsayuAs/j4XQqPDqWu6Dv5hPn7BkXaFREiVUlrIBJRAtIhciu', 'Michel', 'Kim', 'mike5@mail.ru', 'Germany', '2000-10-08', 1, 'ACTIVE')
+2022-01-31 16:27:01.269  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.271  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into users (username, password, first_name, last_name, email, country, birth_date, subscriber_counter, status) values ('Vanya_', '$2a$12$3lj3ALEzZVCrK/BA9fXEoucAfE8lg6z5zoXyusIF3F.eKJ/o0k9c6', 'Ivan', 'Jui', 'ivan4@gmail.com', 'Spain', '1999-08-19', 2, 'ACTIVE')
+2022-01-31 16:27:01.274  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.275  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-user.yaml::insert-user::Anna ran successfully in 317ms
+2022-01-31 16:27:01.276  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-user', 'Anna', 'db/changelog/changeset/insert-user.yaml', NOW(), 8, '8:2519d6bc07b8416fd909ce9fe1595244', 'sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.280  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into roles (type_of_role, user_id) values ('ADMIN', 1)
+2022-01-31 16:27:01.281  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.283  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into roles (type_of_role, user_id) values ('USER', 2)
+2022-01-31 16:27:01.284  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.286  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into roles (type_of_role, user_id) values ('USER', 3)
+2022-01-31 16:27:01.287  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.287  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-role.yaml::insert-role::Anna ran successfully in 9ms
+2022-01-31 16:27:01.288  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-role', 'Anna', 'db/changelog/changeset/insert-role.yaml', NOW(), 9, '8:24d86aab2544267a67ddc30643804a27', 'sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.292  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title1', 'description1', '2020-09-25', 1, 1, 1)
+2022-01-31 16:27:01.318  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.319  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title2', 'description2', '2021-10-20', 2, 1, 1)
+2022-01-31 16:27:01.333  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.335  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title3', 'description3', '2019-01-09', 1, 2, 2)
+2022-01-31 16:27:01.335  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.337  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title4', 'description4', '2021-03-15', 2, 2, 2)
+2022-01-31 16:27:01.337  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.339  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into posts (title, description, date_of_creation, comment_counter, like_counter, user_id) values ('title5', 'description5', '2021-07-16', 1, 1, 3)
+2022-01-31 16:27:01.365  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.366  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-post.yaml::insert-post::Anna ran successfully in 76ms
+2022-01-31 16:27:01.367  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-post', 'Anna', 'db/changelog/changeset/insert-post.yaml', NOW(), 10, '8:c8aa8920bbfbd9af775c99845940f84b', 'sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.369  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('Sam12', 1)
+2022-01-31 16:27:01.370  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.396  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('Tom_9', 1)
+2022-01-31 16:27:01.397  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.398  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('Bob1666', 2)
+2022-01-31 16:27:01.399  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.400  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('NickY2', 3)
+2022-01-31 16:27:01.401  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.402  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into subscribers (username, user_id) values ('German_0', 3)
+2022-01-31 16:27:01.403  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.404  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-subscriber.yaml::insert-subscriber::Anna ran successfully in 36ms
+2022-01-31 16:27:01.405  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-subscriber', 'Anna', 'db/changelog/changeset/insert-subscriber.yaml', NOW(), 11, '8:ebd90a3ed2f47741914f1e438721d8ac', 'sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.407  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('dog', 1)
+2022-01-31 16:27:01.408  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.409  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('politics', 2)
+2022-01-31 16:27:01.410  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.411  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('physics', 2)
+2022-01-31 16:27:01.413  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.414  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('science', 3)
+2022-01-31 16:27:01.415  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.416  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('biology', 4)
+2022-01-31 16:27:01.417  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.418  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('cat', 4)
+2022-01-31 16:27:01.418  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.420  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into tags (name, post_id) values ('mathematics', 5)
+2022-01-31 16:27:01.420  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.421  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-tag.yaml::insert-tag::Anna ran successfully in 15ms
+2022-01-31 16:27:01.422  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-tag', 'Anna', 'db/changelog/changeset/insert-tag.yaml', NOW(), 12, '8:247c1375a18b2137731a16d607194aba', 'sql; sql; sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.424  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Ryan_z', '2021-06-19', 'description1', 1)
+2022-01-31 16:27:01.426  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.427  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Mark_pu', '2021-07-01', 'description2', 2)
+2022-01-31 16:27:01.428  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.429  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Uhhw1', '2021-02-27', 'description3', 2)
+2022-01-31 16:27:01.430  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.431  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Orry11', '2020-11-23', 'description4', 3)
+2022-01-31 16:27:01.432  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.433  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Joma_T', '2021-07-11', 'description5', 4)
+2022-01-31 16:27:01.433  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.434  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Olya', '2019-01-14', 'description6', 4)
+2022-01-31 16:27:01.435  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.436  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into comments (name_of_user, date_of_comment, description_of_comment, post_id) values ('Nayal_', '2021-08-22', 'description7', 5)
+2022-01-31 16:27:01.437  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.437  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-comment.yaml::insert-comment::Anna ran successfully in 14ms
+2022-01-31 16:27:01.438  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-comment', 'Anna', 'db/changelog/changeset/insert-comment.yaml', NOW(), 13, '8:6628a6ede581c5d7dec89a6186b4c22a', 'sql; sql; sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.440  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Nick_', 1)
+2022-01-31 16:27:01.441  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.443  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Tommy7', 2)
+2022-01-31 16:27:01.444  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.446  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Johny_88', 3)
+2022-01-31 16:27:01.447  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.448  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Molly', 3)
+2022-01-31 16:27:01.449  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.450  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Sammy90', 4)
+2022-01-31 16:27:01.450  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.451  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Abby123', 4)
+2022-01-31 16:27:01.452  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.453  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : insert into likes (name_of_user, post_id) values ('Odry_Li', 5)
+2022-01-31 16:27:01.454  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2022-01-31 16:27:01.455  INFO 19588 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/changeset/insert-like.yaml::insert-like::Anna ran successfully in 15ms
+2022-01-31 16:27:01.456  INFO 19588 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('insert-like', 'Anna', 'db/changelog/changeset/insert-like.yaml', NOW(), 14, '8:870ed1de00ba0a9e9deb684311b0ec89', 'sql; sql; sql; sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.10.2', '3635620672')
+2022-01-31 16:27:01.460  INFO 19588 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2022-01-31 16:27:01.637  INFO 19588 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 16:27:01.757  INFO 19588 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-01-31 16:27:02.025  INFO 19588 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-31 16:27:02.209  INFO 19588 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-31 16:27:03.388  INFO 19588 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 16:27:03.403  INFO 19588 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 16:27:03.996  WARN 19588 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-31 16:27:04.985  INFO 19588 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db'. Database available at 'jdbc:h2:mem:db'
+2022-01-31 16:27:05.370  INFO 19588 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/application'
+2022-01-31 16:27:05.623  INFO 19588 --- [main] b.t.yandexzenapi.config.DBConfiguration  : DB connection for DEV - H2, driver-class-name: org.h2.Driver, url : jdbc:h2:mem:db
+2022-01-31 16:27:06.027  INFO 19588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-31 16:27:06.718  INFO 19588 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6be4686b, org.springframework.security.web.context.SecurityContextPersistenceFilter@22445d8e, org.springframework.security.web.header.HeaderWriterFilter@6527a68d, org.springframework.security.web.authentication.logout.LogoutFilter@5b83c5c9, by.tms.yandexzenapi.security.jwt.JWTTokenFilter@7d440b1f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2473eaa8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d2ee1a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@769229cb, org.springframework.security.web.session.SessionManagementFilter@69917739, org.springframework.security.web.access.ExceptionTranslationFilter@49702efb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c421318]
+2022-01-31 16:27:07.362  INFO 19588 --- [main] b.t.y.YandexZenApiApplicationTests       : Started YandexZenApiApplicationTests in 15.164 seconds (JVM running for 19.308)
+2022-01-31 16:27:07.693  INFO 19588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-31 16:27:07.706  INFO 19588 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 16:27:07.709  INFO 19588 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-31 16:27:07.714  INFO 19588 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
