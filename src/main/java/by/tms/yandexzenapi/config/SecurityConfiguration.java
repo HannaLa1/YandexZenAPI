@@ -41,14 +41,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
+                .csrf()
+                .disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, PUBLIC_URLS).permitAll()
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
                 .antMatchers(ADMIN_ENDPOINT).hasAuthority("ADMIN")
-                .antMatchers(  "/db/**").permitAll()
+                .antMatchers(HttpMethod.GET, PUBLIC_URLS).permitAll()
+                .antMatchers("/db/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JWTConfig(jwtTokenProvider));

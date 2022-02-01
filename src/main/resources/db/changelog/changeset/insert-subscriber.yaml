@@ -4,6 +4,12 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into subscribers (username, userId) values ('Sam12', 1)
+            sql: insert into subscribers (username, user_id) values ('Sam12', 1)
         - sql:
-            sql: insert into subscribers (username, userId) values ('Tom_9', 2)
+            sql: insert into subscribers (username, user_id) values ('Tom_9', 1)
+        - sql:
+            sql: insert into subscribers (username, user_id) values ('Bob1666', 2)
+        - sql:
+            sql: insert into subscribers (username, user_id) values ('NickY2', 3)
+        - sql:
+            sql: insert into subscribers (username, user_id) values ('German_0', 3)

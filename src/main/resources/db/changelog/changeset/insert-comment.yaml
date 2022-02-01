@@ -4,8 +4,24 @@ databaseChangeLog:
       author: Anna
       changes:
         - sql:
-            sql: insert into comments (nameOfUser, dateOfComment, descriptionOfComment, postId)
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
               values ('Ryan_z', '2021-06-19', 'description1', 1)
         - sql:
-            sql: insert into comments (nameOfUser, dateOfComment, descriptionOfComment, postId)
-              values ('Mark_pu', '2021-07-01', 'description2', 1)
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
+              values ('Mark_pu', '2021-07-01', 'description2', 2)
+        - sql:
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
+              values ('Uhhw1', '2021-02-27', 'description3', 2)
+        - sql:
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
+              values ('Orry11', '2020-11-23', 'description4', 3)
+        - sql:
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
+              values ('Joma_T', '2021-07-11', 'description5', 4)
+        - sql:
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
+              values ('Olya', '2019-01-14', 'description6', 4)
+        - sql:
+            sql: insert into comments (name_of_user, date_of_comment, description_of_comment, post_id)
+              values ('Nayal_', '2021-08-22', 'description7', 5)
+

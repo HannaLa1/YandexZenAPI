@@ -1,6 +1,5 @@
-package by.tms.yandexzenapi.dto;
+package by.tms.yandexzenapi.dto.user;
 
-import by.tms.yandexzenapi.model.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,11 +8,11 @@ import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor @NoArgsConstructor
-public class UserAdminDTO {
-
-    private long id;
+public class UserDTO {
 
     private String username;
+
+    private String password;
 
     private String firstName;
 
@@ -25,5 +24,5 @@ public class UserAdminDTO {
 
     private LocalDate birthDate;
 
-    private Status status;
+    private int subscriberCounter;
 }

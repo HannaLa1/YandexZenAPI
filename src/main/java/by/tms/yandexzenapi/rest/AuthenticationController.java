@@ -1,11 +1,13 @@
 package by.tms.yandexzenapi.rest;
 
-import by.tms.yandexzenapi.dto.AuthRequestDTO;
-import by.tms.yandexzenapi.dto.UserDTO;
-import by.tms.yandexzenapi.mapper.UserMapper;
+import by.tms.yandexzenapi.dto.user.AuthRequestDTO;
+import by.tms.yandexzenapi.dto.user.UserDTO;
+import by.tms.yandexzenapi.mapper.user.UserMapper;
 import by.tms.yandexzenapi.model.User;
 import by.tms.yandexzenapi.security.jwt.JWTTokenProvider;
 import by.tms.yandexzenapi.service.UserService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -13,13 +15,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,16 +40,13 @@ public class AuthenticationController {
     private final JWTTokenProvider jwtTokenProvider;
 
     @PostMapping("/logIn")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
     public ResponseEntity<Map<Object, Object>> logIn(@RequestBody AuthRequestDTO requestDto){
 
         try {
             String username = requestDto.getUsername();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, requestDto.getPassword()));
             User user = service.findByUsername(username);
-
-            if (user == null) {
-                throw new UsernameNotFoundException("User with username: " + username + " not found");
-            }
 
             String token = jwtTokenProvider.generateToken(username, user.getRoleList());
 
@@ -59,7 +61,8 @@ public class AuthenticationController {
     }
 
     @PostMapping("/reg")
-    public ResponseEntity<UserDTO> registration(@RequestBody UserDTO userDTO){
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
+    public ResponseEntity<UserDTO> registration(@Valid @RequestBody UserDTO userDTO){
 
         if (service.existByUsername(userDTO.getUsername()) || service.existByEmail(userDTO.getEmail())){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -68,5 +71,20 @@ public class AuthenticationController {
         service.registration(userMapper.toUser(userDTO));
 
         return new ResponseEntity<>(userDTO, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/logout")
+    @ApiOperation(value = "", authorizations = { @Authorization(value="SECURITY_REFERENCE") })
+    public ResponseEntity<Map<Object, Object>> logOut(HttpSession session, HttpServletRequest request, HttpServletResponse response) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        Map<Object, Object> resp = new HashMap<>();
+
+        if (auth != null) {
+            resp.put("username", auth.getName());
+            resp.put("session, lastAccessedTime", session.getLastAccessedTime());
+            new SecurityContextLogoutHandler().logout(request, response, auth);
+        }
+
+        return new ResponseEntity<>(resp, HttpStatus.OK);
     }
 }

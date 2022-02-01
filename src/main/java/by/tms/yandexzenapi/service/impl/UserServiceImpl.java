@@ -24,7 +24,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String username) {
-        User byUsername = userRepository.findByUsername(username);
+        User byUsername = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User with username: " + username + " not found"));
+
         log.info("In method findByUsername - user: {} successfully found by username {}", byUsername, username);
 
         return byUsername;
@@ -44,12 +46,18 @@ public class UserServiceImpl implements UserService {
         role.setUser(user);
         User regUser = userRepository.save(user);
         roleRepository.save(role);
+
         log.info("In method registration - user : {} successfully sign up", regUser);
     }
 
     @Override
     public List<User> findAll() {
         List<User> users = userRepository.findAll();
+
+        if (users.isEmpty()){
+            throw new RuntimeException("No users found!");
+        }
+
         log.info("In method findAll - {} users found", users.size());
 
         return users;
@@ -57,12 +65,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(long id) {
-        User byId = userRepository.findById(id).orElse(null);
-
-        if (byId == null) {
-            log.warn("IN method findById - no user found by id: {}", id);
-            return null;
-        }
+        User byId = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User with id: " + id + " not found"));
 
         log.info("IN method findById - user: {} found by id: {}", byId, id);
         return byId;
@@ -82,5 +86,23 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean existByEmail(String email) {
         return userRepository.existsByEmail(email);
+    }
+
+    @Override
+    public User update(String username, User user) {
+        User byUsername = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User with username: " + username + " not found"));
+
+        byUsername.setUsername(user.getUsername());
+        byUsername.setPassword(passwordEncoder.encode(user.getPassword()));
+        byUsername.setFirstName(user.getFirstName());
+        byUsername.setLastName(user.getLastName());
+        byUsername.setEmail(user.getEmail());
+        byUsername.setCountry(user.getCountry());
+        byUsername.setBirthDate(user.getBirthDate());
+        byUsername.setSubscriberCounter(user.getSubscriberCounter());
+        log.info("IN method update - updated user : {}", byUsername);
+
+        return userRepository.save(byUsername);
     }
 }

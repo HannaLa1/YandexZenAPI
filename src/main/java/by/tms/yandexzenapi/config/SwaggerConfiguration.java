@@ -8,13 +8,8 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.ApiKey;
-import springfox.documentation.service.AuthorizationScope;
-import springfox.documentation.service.SecurityReference;
 import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
-
-import java.util.List;
 
 import static java.util.Collections.singletonList;
 
@@ -25,7 +20,6 @@ public class SwaggerConfiguration {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(getApiInfo())
-                .securityContexts(singletonList(securityContext()))
                 .securitySchemes(singletonList(apiKey()))
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("by.tms.yandexzenapi.rest"))
@@ -33,15 +27,6 @@ public class SwaggerConfiguration {
 				.build();
 
 	}
-
-    private SecurityContext securityContext() {
-        return SecurityContext.builder().securityReferences(defaultAuth()).build();
-    }
-
-    private List<SecurityReference> defaultAuth() {
-        AuthorizationScope[] authorizationScopes = {new AuthorizationScope("global", "accessEverything")};
-        return singletonList(new SecurityReference("JWT", authorizationScopes));
-    }
 
     private ApiKey apiKey() {
 			return new ApiKey("SECURITY_REFERENCE", "Authorization", SecurityScheme.In.HEADER.name());

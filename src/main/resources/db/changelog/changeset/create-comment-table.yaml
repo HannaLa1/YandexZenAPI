@@ -14,24 +14,25 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: nameOfUser
+                  name: name_of_user
                   type: varchar(100)
                   constraints:
                     nullable: false
               - column:
-                  name: dateOfComment
+                  name: date_of_comment
                   type: datetime
                   constraints:
                     nullable: false
               - column:
-                  name: descriptionOfComment
+                  name: description_of_comment
                   type: varchar(200)
                   constraints:
                     nullable: false
               - column:
-                  name: postId
+                  name: post_id
                   type: bigint
                   constraints:
                     foreignKeyName: post_id_fk1
                     referencedTableName: posts
                     referencedColumnNames: id
+                    deleteCascade: true

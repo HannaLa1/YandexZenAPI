@@ -6,8 +6,12 @@ databaseChangeLog:
         - sql:
             sql: insert into users (username, password, first_name, last_name, email, country, birth_date,
               subscriber_counter, status) values ('John5', '$2a$12$2gw.4kiKzsmt9iAC/vnY7.N7FeBnaEXCEnzmCkh5c9h6.Epa06Eym',
-              'John', 'Hill', 'john33@gmail.com', 'Norway', '1991-09-19', 277, 'ACTIVE')
+              'John', 'Hill', 'john33@gmail.com', 'Norway', '1991-09-19', 2, 'ACTIVE')
         - sql:
             sql: insert into users (username, password, first_name, last_name, email, country, birth_date,
               subscriber_counter, status) values ('Mike6', '$2a$12$dEofCsayuAs/j4XQqPDqWu6Dv5hPn7BkXaFREiVUlrIBJRAtIhciu',
-              'Michel', 'Kim', 'mike5@mail.ru', 'Germany', '2000-10-08', 100, 'ACTIVE')
+              'Michel', 'Kim', 'mike5@mail.ru', 'Germany', '2000-10-08', 1, 'ACTIVE')
+        - sql:
+            sql: insert into users (username, password, first_name, last_name, email, country, birth_date,
+              subscriber_counter, status) values ('Vanya_', '$2a$12$3lj3ALEzZVCrK/BA9fXEoucAfE8lg6z5zoXyusIF3F.eKJ/o0k9c6',
+              'Ivan', 'Jui', 'ivan4@gmail.com', 'Spain', '1999-08-19', 2, 'ACTIVE')

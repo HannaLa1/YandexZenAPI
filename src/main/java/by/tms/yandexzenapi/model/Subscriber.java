@@ -19,6 +19,4 @@ public class Subscriber {
 
     @ManyToOne
     private User user;
-
-    private boolean isActive;
 }

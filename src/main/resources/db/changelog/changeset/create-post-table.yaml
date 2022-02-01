@@ -24,20 +24,21 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: dateOfCreation
+                  name: date_of_creation
                   type: date
                   constraints:
                     nullable: false
               - column:
-                  name: commentCounter
+                  name: comment_counter
                   type: int(10)
               - column:
-                  name: likeCounter
+                  name: like_counter
                   type: int(10)
               - column:
-                  name: userId
+                  name: user_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk3_user_id
                     referencedTableName: users
                     referencedColumnNames: id
+                    deleteCascade: true

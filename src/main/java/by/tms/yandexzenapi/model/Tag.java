@@ -17,7 +17,7 @@ public class Tag {
     private long id;
 
     @ManyToOne
-    private User user;
+    private Post post;
 
     private String name;
 }

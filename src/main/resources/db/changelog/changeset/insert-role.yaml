@@ -7,3 +7,5 @@ databaseChangeLog:
             sql: insert into roles (type_of_role, user_id) values ('ADMIN', 1)
         - sql:
             sql: insert into roles (type_of_role, user_id) values ('USER', 2)
+        - sql:
+            sql: insert into roles (type_of_role, user_id) values ('USER', 3)
